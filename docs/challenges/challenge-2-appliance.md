@@ -43,7 +43,7 @@ Before starting this challenge, ensure:
 - [ ] You completed the Azure 101 pre-work
 - [ ] You can access the Azure portal
 - [ ] Your facilitator has confirmed ArcBox is deployed and ready
-- [ ] You have the ArcBox VM credentials (see [ArcBox Environment](../getting-started/arcbox-environment/))
+- [ ] You have the ArcBox VM credentials (see [ArcBox Environment](../../getting-started/arcbox-environment/))
 
 ---
 
@@ -201,7 +201,7 @@ Before starting this challenge, ensure:
    | Linux | `LinuxAdmin` | arcbox | Ubuntu VMs |
    | SQL Server | `SQLAdmin` | sa (if applicable) | SQL instance discovery |
 
-   > 💡 **Tip**: Get exact credentials from [ArcBox Environment](../getting-started/arcbox-environment/)
+   > 💡 **Tip**: Get exact credentials from [ArcBox Environment](../../getting-started/arcbox-environment/)
 
 ✅ **Verify**:
 
@@ -316,4 +316,4 @@ This is exactly how real migrations begin — with discovery!
 
 ⏸️ **Break for Lunch** — Discovery will continue running.
 
-After lunch, verify your discovered servers and proceed to [Challenge 3: Assessment](challenge-3-assessment/).
+After lunch, verify your discovered servers and proceed to [Challenge 3: Assessment](../challenge-3-assessment/).

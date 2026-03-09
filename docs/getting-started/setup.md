@@ -85,7 +85,7 @@ If you're new to Azure, review these concepts before the workshop:
 
 ## Optional: Read the Scenario
 
-Review the [Workshop Prep](workshop-prep/) to understand the Contoso Bakery case study before the workshop.
+Review the [Workshop Prep](../workshop-prep/) to understand the Contoso Bakery case study before the workshop.
 
 ---
 
@@ -156,4 +156,4 @@ Ensure you can access these URLs:
 
 After the workshop, your facilitator will run cleanup scripts to remove all
 Azure resources. If you need to clean up manually, see
-[Governance Scripts](../reference/governance-scripts/).
+[Governance Scripts](../../reference/governance-scripts/).

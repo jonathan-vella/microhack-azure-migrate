@@ -293,4 +293,4 @@ This data drives migration decisions!
 
 ## Next Step
 
-Bring your assessment findings to [Challenge 4: Execute](challenge-4-execute/) where you'll design the detailed migration strategy.
+Bring your assessment findings to [Challenge 4: Execute](../challenge-4-execute/) where you'll design the detailed migration strategy.

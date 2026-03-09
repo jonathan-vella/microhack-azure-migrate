@@ -9,8 +9,4 @@ permalink: /reference/
 
 # Reference
 
-| Resource | Description |
-|---|---|
-| [Glossary](glossary/) | Key Azure Migrate and CAF terminology |
-| [Troubleshooting](troubleshooting/) | Common issues and fixes |
-| [Governance Scripts](governance-scripts/) | PowerShell scripts for workshop automation |
+Glossary, troubleshooting, and governance scripts for the workshop.

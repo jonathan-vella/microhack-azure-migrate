@@ -7,6 +7,9 @@ url: "https://jonathan-vella.github.io"
 
 theme: just-the-docs
 
+# Permalink style — generates /slug/index.html so trailing-slash links work
+permalink: pretty
+
 # Color scheme
 color_scheme: light
 

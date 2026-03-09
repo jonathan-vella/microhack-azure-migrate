@@ -303,7 +303,7 @@ Congratulations on completing the Azure Migration Workshop!
 
 ### Next Steps
 
-1. **Complete the [Feedback Form](../about/feedback/)**
+1. **Complete the [Feedback Form](../../about/feedback/)**
 2. **Cleanup resources** — Run the cleanup script
 3. **Stay connected**:
    - [Azure Migrate documentation](https://learn.microsoft.com/azure/migrate/)

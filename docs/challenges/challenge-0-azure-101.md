@@ -189,4 +189,4 @@ Complete this checklist before proceeding:
 
 ## Next Step
 
-Once your team has completed all verification items, proceed to the [Scenario Introduction](../getting-started/workshop-prep/), then continue to [Challenge 1: Plan](challenge-1-plan/).
+Once your team has completed all verification items, proceed to the [Scenario Introduction](../../getting-started/workshop-prep/), then continue to [Challenge 1: Plan](../challenge-1-plan/).

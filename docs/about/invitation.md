@@ -41,7 +41,7 @@ Please complete the **30-minute pre-work** to ensure you're ready:
 
 1. Watch: [Azure Fundamentals in 5 minutes](https://www.youtube.com/watch?v=NKEFWyqJ5XA)
 2. Watch: [Azure Migrate Overview](https://www.youtube.com/watch?v=SAQwYb9F-_c)
-3. Review the [Contoso Bakery scenario brief](../getting-started/workshop-prep/)
+3. Review the [Contoso Bakery scenario brief](../../getting-started/workshop-prep/)
 
 ## What to Bring
 

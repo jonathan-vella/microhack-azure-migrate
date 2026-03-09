@@ -76,5 +76,5 @@ Common issues encountered during the workshop and how to resolve them.
 4. **Ask your team first** — they may have already solved it
 5. **Raise your hand** — facilitators are here to help
 
-> Still stuck? Check [Hints and Tips](../guides/hints-and-tips/) for challenge-specific guidance.
+> Still stuck? Check [Hints and Tips](../../guides/hints-and-tips/) for challenge-specific guidance.
 {: .tip }

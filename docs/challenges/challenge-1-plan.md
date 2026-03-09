@@ -263,4 +263,4 @@ After completing this challenge, consider:
 
 ## Next Step
 
-After your wave plan is complete and photographed, proceed to [Challenge 2: Deploy Appliance](challenge-2-appliance/) to start discovering the actual environment.
+After your wave plan is complete and photographed, proceed to [Challenge 2: Deploy Appliance](../challenge-2-appliance/) to start discovering the actual environment.

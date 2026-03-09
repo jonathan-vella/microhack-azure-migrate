@@ -103,7 +103,7 @@ PLAN → PREPARE → EXECUTE → OPTIMISE → DECOMMISSION
 
 ## Need Help?
 
-1. Check [Hints and Tips](../guides/hints-and-tips/)
+1. Check [Hints and Tips](../hints-and-tips/)
 2. Ask your team
 3. Raise your hand for facilitator
 

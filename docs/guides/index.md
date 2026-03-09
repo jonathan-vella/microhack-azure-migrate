@@ -10,8 +10,3 @@ permalink: /guides/
 # Guides
 
 Participant support resources for during the workshop.
-
-| Guide | Description |
-|---|---|
-| [Hints & Tips](hints-and-tips/) | Expandable hints for each challenge (try first, then reveal!) |
-| [Quick Reference Card](quick-reference-card/) | Printable one-page cheat sheet with schedule, URLs, and scoring |

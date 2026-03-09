@@ -268,6 +268,6 @@ The ability to adapt your plan is just as important as creating it!
 
 ## Next Step
 
-Proceed immediately to [Challenge 6: Optimise](challenge-6-optimize/) to finalise your design with cost optimisation and governance.
+Proceed immediately to [Challenge 6: Optimise](../challenge-6-optimize/) to finalise your design with cost optimisation and governance.
 
 </details>

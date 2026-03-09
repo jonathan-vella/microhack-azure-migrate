@@ -311,4 +311,4 @@ Impress the judges with advanced cost optimization:
 
 ## Next Step
 
-Prepare for [Challenge 7: Presentation](challenge-7-presentation/) — Time to present your complete migration strategy!
+Prepare for [Challenge 7: Presentation](../challenge-7-presentation/) — Time to present your complete migration strategy!
