@@ -245,18 +245,18 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 
 **Your Actions**:
 - Timekeeper (strict 8-minute limit per team)
-- Each team has 12 minutes total (8 min presentation + 4 min objections)
+- Each team has 11 minutes total (8 min presentation + 3 min objections)
 - Deliver the 3 mandatory objections
 - Score presentations using rubric
 - Encourage peer appreciation
 
 **Presentation Order** (4 teams):
 | Team | Time Slot |
-|------|-----------|  
-| Team 1 | 16:00 - 16:12 |
-| Team 2 | 16:12 - 16:24 |
-| Team 3 | 16:24 - 16:36 |
-| Team 4 | 16:36 - 16:48 |
+|------|-----------|
+| Team 1 | 16:00 - 16:11 |
+| Team 2 | 16:11 - 16:22 |
+| Team 3 | 16:22 - 16:33 |
+| Team 4 | 16:33 - 16:44 |
 
 **Objection Delivery**:
 
@@ -272,7 +272,7 @@ After each presentation, deliver these objections (adapt wording):
 
 ---
 
-### 16:48-17:00 | Wrap-up
+### 16:45-17:00 | Wrap-up
 
 **Your Actions**:
 1. Tally final scores

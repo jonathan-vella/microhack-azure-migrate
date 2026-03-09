@@ -32,7 +32,7 @@ Read this aloud (or adapt to your style):
 >
 > ---
 >
-> **Email from CISO:**
+> **Email from IT Manager:**
 >
 > *"Team,*
 >
@@ -42,14 +42,14 @@ Read this aloud (or adapt to your style):
 >
 > *This includes:*
 > - *Customer database records*
-> - *Transaction logs*  
+> - *Transaction logs*
 > - *User authentication data*
 > - *Any backups or replicas of the above*
 >
 > *Please update your migration plans accordingly. I need confirmation that our architecture addresses this requirement before we can proceed.*
 >
-> *Regards,*  
-> *Chief Information Security Officer*  
+> *Regards,*
+> *IT Manager*
 > *Contoso Bakery"*
 >
 > ---
@@ -58,7 +58,7 @@ Read this aloud (or adapt to your style):
 >
 > **Facilitator**: "So... it looks like you have a new constraint to work with. You have 30 minutes in Challenge 5 to analyze the impact and update your migration plans. This challenge is worth 10 points."
 >
-> "The challenge instructions are in your `challenge-5-curveball.md` file. You may reveal the hidden content now."
+> "The challenge instructions are in your `05-curveball.md` file. You may reveal the hidden content now."
 >
 > "Time starts... now!"
 
@@ -74,7 +74,7 @@ Read this aloud (or adapt to your style):
 | "We already planned for EU!" | "Great foresight! Document how." |
 | "This changes everything!" | "That's real life. Start with impact analysis." |
 | "Is this fair?" | "100% fair — it's worth 10 points and tests adaptability." |
-| Confusion | Point to challenge-5-curveball.md |
+| Confusion | Point to 05-curveball.md |
 
 ### Coaching During Challenge 5
 

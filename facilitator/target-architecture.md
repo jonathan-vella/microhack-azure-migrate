@@ -74,6 +74,10 @@ graph TD
 
 ## Migration Mapping
 
+> **Note**: Both IaaS (Azure VMs) and PaaS (App Service, Azure SQL Database) migration
+> paths are valid. The table below shows a PaaS-optimised target, but teams may choose
+> a lift-and-shift (IaaS) approach and should be prepared to justify their decision.
+
 | On-Premises (ArcBox) | Target Azure Service | Migration Tool |
 |---------------------|---------------------|----------------|
 | ArcBox-Ubuntu-01 (Web) | Azure App Service (Linux) | Azure Migrate |

@@ -27,7 +27,7 @@ Each team needs:
 
 ### 1.2 Register Resource Providers
 
-Run this for each subscription:
+Run this for each subscription (PowerShell):
 
 ```powershell
 $providers = @(
@@ -51,7 +51,7 @@ foreach ($provider in $providers) {
 
 ArcBox requires **8 DSv5-series vCPUs** per deployment.
 
-```powershell
+```bash
 # Check quota for DSv5 family
 az vm list-usage --location eastus --query "[?name.value=='standardDSv5Family']"
 ```
@@ -91,20 +91,20 @@ Deploy ArcBox only in these regions:
 
 ### 2.3 Deploy Using CLI (Alternative)
 
-```powershell
+```bash
 # Variables
-$teamName = "team1"
-$location = "eastus"
-$password = "YourStr0ngP@ssword!"
+TEAM_NAME="team1"
+LOCATION="eastus"
+PASSWORD="YourStr0ngP@ssword!"
 
 # Create resource group
-az group create --name "rg-arcbox-$teamName" --location $location
+az group create --name "rg-arcbox-${TEAM_NAME}" --location "${LOCATION}"
 
 # Deploy ArcBox
 az deployment group create \
-    --resource-group "rg-arcbox-$teamName" \
+    --resource-group "rg-arcbox-${TEAM_NAME}" \
     --template-uri "https://raw.githubusercontent.com/microsoft/azure_arc/main/azure_jumpstart_arcbox/ARM/azuredeploy.json" \
-    --parameters windowsAdminPassword=$password \
+    --parameters windowsAdminPassword="${PASSWORD}" \
     --parameters deployBastion=true
 ```
 
@@ -116,7 +116,7 @@ az deployment group create \
 
 For each team, verify:
 
-```powershell
+```bash
 az deployment group show \
     --resource-group "rg-arcbox-[teamname]" \
     --name "azuredeploy" \
@@ -128,7 +128,7 @@ Should return: `Succeeded`
 ### 3.2 Connect to ArcBox-Client
 
 1. Get the public IP:
-   ```powershell
+   ```bash
    az vm show -g "rg-arcbox-[teamname]" -n "ArcBox-Client" -d --query "publicIps" -o tsv
    ```
 
@@ -213,7 +213,7 @@ Get-FileHash -Path .\MicrosoftAzureMigrate-Hyper-V.ps1 -Algorithm SHA256
 
 For each team member, assign:
 
-```powershell
+```bash
 # Owner on the subscription (or at minimum, the resource group)
 az role assignment create \
     --assignee "user@domain.com" \
@@ -239,18 +239,23 @@ For appliance registration, users need:
 
 ## Step 7: Configure Cost Controls
 
-### 7.1 Set Spending Caps (if supported)
+### 7.1 Set Spending Controls
 
-For subscriptions that support spending caps:
-1. Navigate to subscription → Budgets
-2. Create budget: $100 per team
-3. Set alerts at 50%, 80%, 100%
+For **MSDN / Free Trial** subscriptions, configure the built-in spending cap in the
+[Account Center](https://account.azure.com/).
+
+For **Enterprise / Pay-As-You-Go** subscriptions (which do not support spending caps),
+use **Azure Cost Management budgets** instead:
+
+1. Navigate to subscription → **Budgets**
+2. Create a budget: **$100** per team
+3. Set alerts at 50 %, 80 %, 100 %
 
 ### 7.2 Configure Auto-Shutdown
 
 For ArcBox-Client VMs:
 
-```powershell
+```bash
 az vm auto-shutdown \
     --resource-group "rg-arcbox-[teamname]" \
     --name "ArcBox-Client" \
