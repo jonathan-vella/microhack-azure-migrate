@@ -56,7 +56,7 @@ Your simulated on-premises datacenter (represented by ArcBox) contains:
 
 ### Application Landscape
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                       CONTOSO BAKERY                             │
 ├─────────────────────────────────────────────────────────────────┤

@@ -41,6 +41,7 @@ Read this aloud (or adapt to your style):
 > ***Effective immediately**, all customer data, financial records, and personally identifiable information must remain within the **European Union** to comply with GDPR requirements.*
 >
 > *This includes:*
+>
 > - *Customer database records*
 > - *Transaction logs*
 > - *User authentication data*
@@ -58,7 +59,7 @@ Read this aloud (or adapt to your style):
 >
 > **Facilitator**: "So... it looks like you have a new constraint to work with. You have 30 minutes in Challenge 5 to analyze the impact and update your migration plans. This challenge is worth 10 points."
 >
-> "The challenge instructions are in your `05-curveball.md` file. You may reveal the hidden content now."
+> "The challenge instructions are in your Challenge 5: Curveball page. You may reveal the hidden content now."
 >
 > "Time starts... now!"
 
@@ -74,7 +75,7 @@ Read this aloud (or adapt to your style):
 | "We already planned for EU!" | "Great foresight! Document how." |
 | "This changes everything!" | "That's real life. Start with impact analysis." |
 | "Is this fair?" | "100% fair — it's worth 10 points and tests adaptability." |
-| Confusion | Point to 05-curveball.md |
+| Confusion | Point to Challenge 5: Curveball page |
 
 ### Coaching During Challenge 5
 

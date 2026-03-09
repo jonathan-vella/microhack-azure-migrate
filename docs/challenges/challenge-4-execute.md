@@ -58,7 +58,7 @@ For each workload type, select the appropriate Azure migration tool:
 | **Azure Migrate: Server Migration** | IaaS VMs | Agentless or agent-based |
 | **Azure Site Recovery (ASR)** | Disaster recovery + migration | Continuous replication |
 | **Azure Database Migration Service (DMS)** | Databases | Online or offline modes |
-| **Azure Migrate: SQL Migration** | SQL to Azure SQL | Built into Azure Migrate |
+| **Azure SQL Migration extension** | SQL to Azure SQL | Built into Azure Migrate |
 | **Data Box** | Large data transfers | Offline, physical device |
 | **AzCopy / Storage Migration** | File servers | SMB to Azure Files |
 
@@ -75,6 +75,7 @@ For each server, document your tool choice:
 | ArcBox-Ubuntu-02 | Monitoring | | | |
 
 **Guiding Questions**:
+
 - Does the workload need near-zero downtime or is maintenance window OK?
 - Any data residency requirements affecting tool choice?
 - What's the simplest path for each workload?
@@ -121,13 +122,14 @@ gantt
 | 3 | _[Fill in]_ | _[List servers]_ | _X days_ | _X hours_ | _[Criteria]_ |
 
 **Guiding Questions**:
+
 - Which workload should go first (lowest risk, good learning)?
 - Should SQL migrate before or after the app servers?
 - How do you handle the customer-facing web server?
 
 #### Recommended Sequencing Pattern
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                    MIGRATION TIMELINE                        │
 ├─────────────────────────────────────────────────────────────┤
@@ -160,6 +162,7 @@ Define what constitutes a failed migration requiring rollback:
 | Recovery time exceeded | > X hours to resolve | Rollback |
 
 **Guiding Questions**:
+
 - How long will you keep the source environment running post-migration?
 - What's the maximum acceptable rollback time (RTO)?
 - Who has authority to trigger a rollback?
@@ -173,7 +176,7 @@ For each wave, document:
 3. **DNS/Network** — How to redirect traffic?
 4. **Timeline** — How long until rollback is no longer possible?
 
-```
+```text
 ROLLBACK PROCEDURE - WAVE 1
 ├── Trigger: [who decides, based on what]
 ├── Step 1: Stop application in Azure
@@ -262,14 +265,14 @@ By the end of this challenge, your whiteboard should show:
 
 ---
 
-### Reflection Questions
-
----
-
 ## ⚠️ Watch out
 
 - A strong plan without rollback detail increases execution risk.
 - Keep cutover communication and DNS steps explicit in your runbook.
+
+---
+
+### Reflection Questions
 
 - How did your assessment results influence tool selection?
 - What dependencies created constraints in your sequencing?
@@ -279,6 +282,6 @@ By the end of this challenge, your whiteboard should show:
 
 ## Next Step
 
-⏸️ **WAIT!** Take a break (14:45-15:00).
+⏸️ **WAIT!** Take a break (14:30–14:45).
 
 At 14:45, your facilitator will announce **Challenge 5: Curveball** — a surprise requirement that will test your adaptability!

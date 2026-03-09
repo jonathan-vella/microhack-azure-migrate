@@ -1,3 +1,3 @@
-# Scripts Documentation (Moved)
+# Scripts
 
-Script documentation moved to [docs/operations/scripts/README.md](../docs/operations/scripts/README.md).
+Script documentation is in the [Governance Scripts](../docs/reference/governance-scripts.md) reference page.

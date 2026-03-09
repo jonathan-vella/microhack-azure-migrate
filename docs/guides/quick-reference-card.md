@@ -87,7 +87,7 @@ description: "Printable one-page reference with schedule, URLs, and scoring"
 
 ## CAF Migrate Phases
 
-```
+```text
 PLAN → PREPARE → EXECUTE → OPTIMISE → DECOMMISSION
 ```
 
@@ -111,7 +111,7 @@ PLAN → PREPARE → EXECUTE → OPTIMISE → DECOMMISSION
 
 ## Notes
 
-```
+```text
 Team Name: _______________________
 
 Subscription ID: _______________________

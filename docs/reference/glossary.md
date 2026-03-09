@@ -59,3 +59,10 @@ Throughout this workshop the following terms are used consistently:
 | **Data residency** | Requirement that data is stored in a specific geographic region |
 | **PII** | Personally Identifiable Information — data that can identify an individual |
 | **Data sovereignty** | Legal requirement that data is subject to the laws of the country where it's stored |
+
+## Identity
+
+| Term | Definition |
+|---|---|
+| **Microsoft Entra ID** | Microsoft's cloud identity and access management service (formerly Azure Active Directory) |
+| **RBAC** | Role-Based Access Control — grants permissions based on assigned roles |

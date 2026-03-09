@@ -38,7 +38,7 @@ Your facilitator will provide Azure subscription access. Verify you can sign in:
 2. Sign in with provided credentials
 3. Verify you can see the subscription
 
-```
+```text
 ✅ Can sign into Azure portal
 ✅ Can see workshop subscription
 ✅ Can see ArcBox resource group (if pre-deployed)
@@ -71,10 +71,10 @@ If you're new to Azure, review these concepts before the workshop:
 
 | Concept | Description | Learn More |
 |---|---|---|
-| **Subscription** | Billing container for resources | [Link](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) |
-| **Resource Group** | Logical container for resources | [Link](https://learn.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal) |
-| **RBAC** | Role-based access control | [Link](https://learn.microsoft.com/azure/role-based-access-control/overview) |
-| **Azure Migrate** | Migration assessment tool | [Link](https://learn.microsoft.com/azure/migrate/migrate-services-overview) |
+| **Subscription** | Billing container for resources | [Learn more](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) |
+| **Resource Group** | Logical container for resources | [Learn more](https://learn.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal) |
+| **RBAC** | Role-based access control | [Learn more](https://learn.microsoft.com/azure/role-based-access-control/overview) |
+| **Azure Migrate** | Migration assessment tool | [Learn more](https://learn.microsoft.com/azure/migrate/migrate-services-overview) |
 
 ### Quick Videos
 
@@ -119,7 +119,7 @@ Ensure you can access these URLs:
 | URL | Purpose |
 |---|---|
 | `portal.azure.com` | Azure Portal |
-| `login.microsoftonline.com` | Azure AD authentication |
+| `login.microsoftonline.com` | Microsoft Entra ID authentication |
 | `*.azure.com` | Azure services |
 | `github.com` | Workshop materials |
 

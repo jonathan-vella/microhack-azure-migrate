@@ -21,6 +21,7 @@ Complete these steps **before the workshop** (ideally the day before).
 ### 1.1 Subscription Requirements
 
 Each team needs:
+
 - **1 Azure subscription** with sufficient quota
 - **Owner** access for team members
 - **Spending cap** configured (recommended: $100)
@@ -63,6 +64,7 @@ az vm list-usage --location eastus --query "[?name.value=='standardDSv5Family']"
 ### 2.1 Supported Regions
 
 Deploy ArcBox only in these regions:
+
 - East US, East US 2, Central US, West US 2
 - North Europe, West Europe, France Central, UK South
 - Australia East, Japan East, Korea Central, Southeast Asia
@@ -128,6 +130,7 @@ Should return: `Succeeded`
 ### 3.2 Connect to ArcBox-Client
 
 1. Get the public IP:
+
    ```bash
    az vm show -g "rg-arcbox-[teamname]" -n "ArcBox-Client" -d --query "publicIps" -o tsv
    ```
@@ -141,6 +144,7 @@ Should return: `Succeeded`
 ### 3.3 Verify Nested VMs
 
 In Hyper-V Manager, confirm these VMs exist and are running:
+
 - [ ] ArcBox-Win2K22
 - [ ] ArcBox-Win2K25
 - [ ] ArcBox-SQL
@@ -193,6 +197,7 @@ winrm enumerate winrm/config/listener
 ```
 
 Alternatively, download and run the official script:
+
 ```powershell
 # Download from Microsoft Learn reference
 # https://learn.microsoft.com/azure/migrate/tutorial-discover-hyper-v
@@ -231,7 +236,7 @@ az role assignment create \
 
 For appliance registration, users need:
 
-1. Navigate to Azure AD → Roles and administrators
+1. Navigate to Microsoft Entra ID → Roles and administrators
 2. Find **Application Developer** role
 3. Add team members (or verify they already have it)
 
@@ -269,7 +274,7 @@ az vm auto-shutdown \
 
 Prepare a credentials sheet for each team:
 
-```
+```text
 TEAM: [Team Name]
 ==============================
 
@@ -376,6 +381,7 @@ foreach ($team in $teams) {
 ## Checklist Summary
 
 **Day Before:**
+
 - [ ] Subscriptions prepared with RBAC
 - [ ] Resource providers registered
 - [ ] ArcBox deployed for each team
@@ -385,6 +391,7 @@ foreach ($team in $teams) {
 - [ ] Credentials documented
 
 **Morning of Workshop:**
+
 - [ ] All ArcBox-Client VMs running
 - [ ] All nested VMs running
 - [ ] RDP access verified

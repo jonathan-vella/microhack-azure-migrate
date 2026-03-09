@@ -308,7 +308,7 @@ Congratulations on completing the Azure Migration Workshop!
 3. **Stay connected**:
    - [Azure Migrate documentation](https://learn.microsoft.com/azure/migrate/)
    - [Cloud Adoption Framework](https://learn.microsoft.com/azure/cloud-adoption-framework/)
-    - [Azure Arc Jumpstart](https://jumpstart.azure.com/)
+   - [Azure Arc Jumpstart](https://jumpstart.azure.com/)
 
 ### Take With You
 

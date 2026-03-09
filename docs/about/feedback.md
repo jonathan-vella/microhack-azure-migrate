@@ -50,13 +50,13 @@ Thank you for participating in the Azure Migration Workshop! Your feedback helps
 
 **4. Which challenge did you find most valuable? Why?**
 
-```
+```text
 [Your response here]
 ```
 
 **5. Which challenge needs the most improvement? Why?**
 
-```
+```text
 [Your response here]
 ```
 
@@ -77,7 +77,7 @@ Thank you for participating in the Azure Migration Workshop! Your feedback helps
 
 **7. What's one thing you learned that you'll apply in your work?**
 
-```
+```text
 [Your response here]
 ```
 
@@ -108,13 +108,13 @@ Thank you for participating in the Azure Migration Workshop! Your feedback helps
 
 **10. What topics would you like to see added or expanded?**
 
-```
+```text
 [Your response here]
 ```
 
 **11. Any other comments or suggestions?**
 
-```
+```text
 [Your response here]
 ```
 
@@ -130,7 +130,7 @@ If you'd like us to follow up with you:
 
 ---
 
-## Thank You!
+## Thank You
 
 Your feedback is invaluable. We read every response and use it to improve our workshops.
 
@@ -138,4 +138,4 @@ Your feedback is invaluable. We read every response and use it to improve our wo
 
 - Join the [Azure Migrate community](https://aka.ms/azuremigrate)
 - Explore [Cloud Adoption Framework](https://aka.ms/caf)
-- Try [Azure Arc Jumpstart](https://azurearcjumpstart.io/)
+- Try [Azure Arc Jumpstart](https://jumpstart.azure.com/)

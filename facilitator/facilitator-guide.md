@@ -34,12 +34,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Welcome participants (assumes Azure 101 pre-work completed).
 
 **Your Actions**:
+
 - Welcome participants, set expectations
 - Explain the competitive scoring format
 - Confirm everyone completed Azure 101 pre-work
 - Quick Azure portal orientation if needed
 
 **Common Issues**:
+
 - Login problems → Check credentials, try incognito mode
 - Can't see subscription → Check subscription filter
 
@@ -52,12 +54,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Set the context and form teams.
 
 **Your Actions**:
-- Present the Contoso Bakery scenario (use scenario-brief.md)
+
+- Present the Contoso Bakery scenario (use [Workshop Prep](../docs/getting-started/workshop-prep.md))
 - Facilitate team formation (4 per team)
 - Walk through ArcBox environment overview
 - Answer questions about the scenario constraints
 
 **Key Points to Emphasize**:
+
 - This is a competitive workshop (leaderboard!)
 - Real-world migration skills are the goal
 - Teams should divide work effectively
@@ -72,18 +76,21 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Design assessment strategy and wave plan.
 
 **Your Actions**:
+
 - Circulate between teams
 - Ask probing questions, don't give answers
 - Watch for teams going off-track
 - Time check at 30 minutes
 
 **Coaching Questions**:
+
 - "Why did you choose that order?"
 - "What if this server depends on that one?"
 - "How would you explain this to the CTO?"
 - "What's your biggest risk?"
 
 **Common Mistakes**:
+
 - Ignoring dependencies → Ask "What happens if SQL is down?"
 - Migrating everything at once → "What's your rollback?"
 - Forgetting monitoring → "How will you know it works?"
@@ -99,12 +106,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Hands-on Azure Migrate appliance deployment.
 
 **Your Actions**:
+
 - Ensure teams can connect to ArcBox
 - Guide through VHD download/import if stuck
 - Help with appliance configuration issues
 - Verify discovery starts before lunch
 
 **Key Technical Checkpoints**:
+
 | Time | Checkpoint |
 |------|------------|
 | 11:30 | Teams connected to ArcBox-Client |
@@ -114,6 +123,7 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 | 12:25 | Credentials added, discovery starting |
 
 **Common Issues**:
+
 - VHD download slow → Provide local copy if prepared
 - Appliance won't start → Check memory, virtual switch
 - Registration fails → Wrong key, pop-up blocked
@@ -126,6 +136,7 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 ### 12:30-13:15 | Lunch
 
 **Your Actions**:
+
 - Eat!
 - Monitor discovery status (spot check)
 - Score Challenge 1 and 2 deliverables
@@ -139,12 +150,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Create and analyze Azure assessments.
 
 **Your Actions**:
+
 - Verify discovered servers appear in portal
 - Guide teams through assessment creation
 - Help interpret assessment results
 - Ensure teams export their findings
 
 **Key Checkpoints**:
+
 | Time | Checkpoint |
 |------|------------|
 | 13:20 | Discovered servers visible |
@@ -153,12 +166,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 | 14:00 | Findings documented |
 
 **Coaching Questions**:
+
 - "What does that readiness status mean?"
 - "Why is the confidence rating low?"
 - "Is that VM size appropriate?"
 - "How will you use this data?"
 
 **If Discovery Is Incomplete**:
+
 - Show demo project with pre-discovered data
 - Have teams work with partial results
 - Emphasize this is normal (full discovery takes time)
@@ -170,18 +185,21 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Design migration execution strategy.
 
 **Your Actions**:
+
 - Ensure teams use assessment findings
 - Guide tool selection discussions
 - Probe on rollback strategy
 - Watch for unrealistic timelines
 
 **Coaching Questions**:
+
 - "Why that tool for this workload?"
 - "What if migration fails at 2 AM?"
 - "Who approves the rollback?"
 - "How long until rollback is impossible?"
 
 **Common Mistakes**:
+
 - No rollback plan → "What's your safety net?"
 - Wrong tool selection → Ask about workload specifics
 - Unrealistic timeline → "How many hours for SQL migration?"
@@ -191,6 +209,7 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 ### 14:30-14:45 | Break
 
 **Your Actions**:
+
 - Score Challenge 3 and 4 deliverables
 - **PREPARE THE CURVEBALL**
 - Set timer for 14:45 announcement
@@ -204,17 +223,20 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Test adaptability with surprise requirement.
 
 **Your Actions**:
+
 1. At exactly 14:45, make the announcement (see [Curveball Script](curveball-script.md))
 2. Let teams absorb the news (1-2 minutes of chaos is normal!)
 3. Guide teams to systematically address the requirement
 4. Ensure all teams understand what's required
 
 **Coaching Questions**:
+
 - "Which servers handle customer data?"
 - "What about your backups?"
 - "How will you prove compliance?"
 
 **Common Reactions**:
+
 - Panic → "Take a breath. Start with impact analysis."
 - Denial → "This is realistic — it happens all the time."
 - Overcomplication → "Focus on the data, not everything."
@@ -226,12 +248,14 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Cost optimization and governance design.
 
 **Your Actions**:
+
 - Guide cost estimation exercises
 - Discuss Hybrid Benefit eligibility
 - Probe on governance structure
 - Introduce Azure Arc for hybrid
 
 **Coaching Questions**:
+
 - "Do you have Windows Server licenses?"
 - "Which workloads are stable enough for RIs?"
 - "How will you enforce policies?"
@@ -244,13 +268,15 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 **Purpose**: Team presentations and objection handling.
 
 **Your Actions**:
+
 - Timekeeper (strict 8-minute limit per team)
-- Each team has 11 minutes total (8 min presentation + 3 min objections)
+- Each team has 12 minutes total (8 min presentation + 4 min objections)
 - Deliver the 3 mandatory objections
 - Score presentations using rubric
 - Encourage peer appreciation
 
 **Presentation Order** (4 teams):
+
 | Team | Time Slot |
 |------|-----------|
 | Team 1 | 16:00 - 16:11 |
@@ -275,6 +301,7 @@ After each presentation, deliver these objections (adapt wording):
 ### 16:45-17:00 | Wrap-up
 
 **Your Actions**:
+
 1. Tally final scores
 2. Announce leaderboard (with fanfare!)
 3. Award prizes if available
@@ -284,6 +311,7 @@ After each presentation, deliver these objections (adapt wording):
 7. Run cleanup scripts
 
 **Key Takeaways to Emphasize**:
+
 - Azure Migrate is the starting point for any migration
 - Assessment data drives decisions
 - Rollback planning is essential
@@ -310,21 +338,25 @@ Use these when teams are stuck:
 ## Emergency Procedures
 
 ### Azure Portal Down
+
 1. Use Azure CLI as backup
 2. Show screenshots from solution reference
 3. Adjust challenge focus to WDS
 
 ### ArcBox Not Working
+
 1. Have backup environment ready
 2. Use demo discovery data
 3. Focus on design challenges
 
 ### Team Member Drops Out
+
 1. Redistribute work among remaining members
 2. Adjust scoring expectations slightly
 3. Pair with another small team if needed
 
 ### Running Behind Schedule
+
 | Cut from | Save Time |
 |----------|-----------|
 | Scenario intro | 10 min (read-ahead) |
@@ -356,7 +388,7 @@ Use these when teams are stuck:
 
 ---
 
-## Thank You!
+## Thank You
 
 Thank you for facilitating this workshop. Your guidance helps IT professionals build real-world Azure migration skills.
 

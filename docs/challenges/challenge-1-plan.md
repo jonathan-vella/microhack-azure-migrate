@@ -84,7 +84,7 @@ Work with your team to design the **assessment and wave planning strategy** on y
 
 Use the **Value vs. Complexity Matrix** to prioritize workloads:
 
-```
+```text
                     HIGH COMPLEXITY
                           │
     Strategic             │           Challenging
@@ -234,7 +234,7 @@ Use this template to capture your team's decisions:
 
 ### Reference: CAF Migrate Phases
 
-```
+```text
 ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌──────────┐   ┌─────────────┐
 │  PLAN   │ → │ PREPARE │ → │ EXECUTE │ → │ OPTIMIZE │ → │ DECOMMISSION│
 └─────────┘   └─────────┘   └─────────┘   └──────────┘   └─────────────┘
@@ -244,14 +244,14 @@ Use this template to capture your team's decisions:
 
 ---
 
-### Reflection Questions
+## ⚠️ Watch out
+
+- Avoid over-optimising wave design without validating dependencies.
+- Keep migration rationale evidence-based, not assumption-only.
 
 ---
 
-## ⚠️ Watch out
-
-- Avoid over-optimizing wave design without validating dependencies.
-- Keep migration rationale evidence-based, not assumption-only.
+### Reflection Questions
 
 After completing this challenge, consider:
 

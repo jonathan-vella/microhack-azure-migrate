@@ -31,6 +31,7 @@
 | **Rationale quality** | 5 | No explanation | Basic reasoning | Good justification | Business + technical reasons clearly articulated |
 
 **Scoring Notes**:
+
 - Look for the value/complexity matrix
 - SQL database should have special consideration
 - Monitoring can go early or late (either is valid if justified)
@@ -51,6 +52,7 @@
 | 5 VMs discovered | 5 | All 5 ArcBox VMs appear in portal |
 
 **Scoring Notes**:
+
 - If VHD download was slow, score based on progress
 - Partial credit for 3-4 VMs discovered
 - If discovery running but VMs not yet visible, check appliance status
@@ -69,6 +71,7 @@
 | Findings documented | 5 | Export file or notes captured |
 
 **Scoring Notes**:
+
 - Performance-based assessment preferred over as-is
 - Team should understand confidence rating
 - Cost estimates don't need to be perfect
@@ -87,6 +90,7 @@
 | **Rollback defined** | 5 | No rollback plan | Basic rollback mentioned | Clear triggers, procedures, authority |
 
 **Scoring Notes**:
+
 - Look for: Azure Migrate, ASR, DMS references
 - SQL should have specific tool consideration
 - Rollback should include: triggers, steps, timeline
@@ -104,6 +108,7 @@
 | **Data residency addressed** | 3 | Not mentioned | Region mentioned | Clear approach: region + backup + DR + monitoring |
 
 **Scoring Notes**:
+
 - SQL and Web servers definitely have PII
 - Bonus thinking: logs, backups, monitoring data
 - EU region selection should be specific
@@ -140,6 +145,7 @@ Award bonus points for exceptional work:
 | Security hardening | +5 | Security controls beyond minimum (Private Endpoints, Defender, etc.) |
 
 **Bonus Notes**:
+
 - Bonus should be rare — truly exceptional work
 - Maximum +5 per category
 - Document why bonus was awarded
@@ -148,7 +154,7 @@ Award bonus points for exceptional work:
 
 ## Score Sheet Template
 
-```
+```text
 TEAM: _______________________
 
 Challenge 1: Plan                          /25

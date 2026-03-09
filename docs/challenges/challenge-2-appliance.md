@@ -270,20 +270,17 @@ By the end of this challenge, your team should provide:
 | Appliance won't start | Verify enough RAM (16 GB) on Hyper-V host |
 | Can't access config manager | Check network connectivity, firewall port 44368 |
 | Host validation fails | Verify WinRM port 5985 is open |
-| Registration fails | Ensure you have Application Developer role in Azure AD |
+| Registration fails | Ensure you have Application Developer role in Microsoft Entra ID |
 | Discovery stuck | Check credentials have local admin on Hyper-V host |
 
 ---
 
 ## 💡 Tip
 
-💡 **Work in parallel** — One person downloads VHD while another creates the Migrate project
-
-💡 **Document everything** — Save passwords and IPs, you'll need them later
-
-💡 **Don't wait for full discovery** — Initial server discovery is fast, deeper analysis takes longer
-
-💡 **Check the appliance logs** — If issues occur, logs are at `C:\ProgramData\Microsoft Azure\Logs`
+- **Work in parallel** — One person downloads VHD while another creates the Migrate project
+- **Document everything** — Save passwords and IPs, you'll need them later
+- **Don't wait for full discovery** — Initial server discovery is fast, deeper analysis takes longer
+- **Check the appliance logs** — If issues occur, logs are at `C:\ProgramData\Microsoft Azure\Logs`
 
 ---
 
@@ -304,6 +301,14 @@ You deployed the Azure Migrate appliance, which:
 4. **Sent data to Azure** — Securely via HTTPS to your Migrate project
 
 This is exactly how real migrations begin — with discovery!
+
+---
+
+### Reflection Questions
+
+- What would happen if discovery credentials were wrong?
+- How does agentless discovery differ from agent-based?
+- Why does full software inventory take longer than server metadata?
 
 ---
 

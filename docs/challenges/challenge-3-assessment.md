@@ -255,19 +255,16 @@ Look at the **confidence rating** (1-5 stars):
 
 ## 💡 Tip
 
-💡 **Performance data improves over time** — Initial assessments may have lower confidence
-
-💡 **Review the "Why" not just "What"** — Click into each server to understand recommendations
-
-💡 **Cost is estimate only** — Actual costs depend on usage, reserved instances, hybrid benefit
-
-💡 **Compare to your Challenge 1 plan** — Does reality match your assumptions?
+- **Performance data improves over time** — Initial assessments may have lower confidence
+- **Review the "Why" not just "What"** — Click into each server to understand recommendations
+- **Cost is estimate only** — Actual costs depend on usage, reserved instances, hybrid benefit
+- **Compare to your Challenge 1 plan** — Does reality match your assumptions?
 
 ---
 
 ## ⚠️ Watch out
 
-- Low-confidence assessments can mislead decisions; validate data quality before finalizing recommendations.
+- Low-confidence assessments can mislead decisions; validate data quality before finalising recommendations.
 - Ensure SQL discovery credentials are correct before assuming incompatibility.
 
 ---

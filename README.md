@@ -61,7 +61,7 @@ within a single day.
 
 ## Repository Structure
 
-```
+```text
 docs/                   # GitHub Pages site (just-the-docs theme)
 facilitator/            # Facilitator guide, scoring rubric, solution reference
 scripts/                # Workshop PowerShell scripts
@@ -118,4 +118,4 @@ real Azure actions, apply this checklist:
 This project is provided for educational and workshop use. See the repository
 for license details.
 
-**Ready to begin?** Complete the [Pre-work: Azure 101](docs/challenges/00-azure-101.md), then head to the [Agenda](AGENDA.md) for the detailed schedule.
+**Ready to begin?** Complete the [Pre-work: Azure 101](docs/challenges/challenge-0-azure-101.md), then head to the [Agenda](docs/about/agenda.md) for the detailed schedule.

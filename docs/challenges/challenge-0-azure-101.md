@@ -64,7 +64,7 @@ Before starting this challenge, ensure:
 
 | Concept | Description | Analogy |
 |---------|-------------|---------|
-| **Tenant** | Your organization's Azure AD instance | Your company |
+| **Tenant** | Your organization's Microsoft Entra ID instance | Your company |
 | **Subscription** | Billing container for Azure resources | A credit card account |
 | **Resource Group** | Logical container for related resources | A folder for project files |
 | **Resource** | Individual Azure service instance | A file |
@@ -171,11 +171,9 @@ Complete this checklist before proceeding:
 
 ## 💡 Tip
 
-💡 **Bookmark Azure Migrate** — You'll return here frequently
-
-💡 **Use the search bar** — It's the fastest way to navigate Azure
-
-💡 **Pin to dashboard** — Right-click services to pin them for quick access
+- **Bookmark Azure Migrate** — You'll return here frequently
+- **Use the search bar** — It's the fastest way to navigate Azure
+- **Pin to dashboard** — Right-click services to pin them for quick access
 
 ---
 

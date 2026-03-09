@@ -3,7 +3,7 @@ layout: default
 title: "Challenge 5: Curveball"
 parent: Challenges
 nav_order: 6
-description: "Adapt your migration plan to a surprise GDPR requirement"
+description: "Adapt your migration plan to a surprise mid-project requirement"
 ---
 
 # Challenge 5: Curveball
@@ -40,7 +40,7 @@ Before starting this challenge, ensure:
 
 ---
 
-### ⚠️ STOP — Wait for Facilitator Announcement!
+### ⚠️ STOP — Wait for Facilitator Announcement
 
 Do not read beyond this point until your facilitator announces the curveball at **14:45**.
 
@@ -65,6 +65,7 @@ Do not read beyond this point until your facilitator announces the curveball at 
 > **Effective immediately**, all customer data, financial records, and personally identifiable information (PII) must remain within the **European Union** to comply with GDPR requirements.
 >
 > This includes:
+>
 > - Customer database records
 > - Transaction logs
 > - User authentication data
@@ -104,6 +105,7 @@ Review your servers and identify which ones handle GDPR-covered data:
 | ArcBox-Ubuntu-02 (Monitoring) | Yes/No | Yes/No | High/Medium/Low |
 
 **Guiding Questions**:
+
 - Which servers definitely need to be in an EU region?
 - Which servers could potentially remain in a non-EU region?
 - Are there any data flows between servers you need to consider?
@@ -124,14 +126,17 @@ Update your migration plan to address GDPR:
 #### Additional Considerations
 
 **Data Replication**:
+
 - If you planned for multi-region, does replication cross EU boundaries?
 - Azure Site Recovery — where are secondary replicas?
 
 **Backup Storage**:
+
 - Where will backups be stored?
 - Are geo-redundant storage (GRS) targets in EU?
 
 **Network Traffic**:
+
 - Does data flow through non-EU regions?
 - Any third-party services outside EU?
 
@@ -153,7 +158,7 @@ Document how you'll address GDPR requirements:
 | Access controls | Azure RBAC, JIT access, PIM |
 | Audit logging | Azure Monitor, Log Analytics |
 | Data subject rights (DSAR) | [Your approach] |
-| Breach notification | Azure Security Center alerts |
+| Breach notification | Microsoft Defender for Cloud alerts |
 
 #### Azure Services for Compliance
 
@@ -161,7 +166,7 @@ Document how you'll address GDPR requirements:
 |---------|---------|
 | **Azure Policy** | Enforce allowed regions |
 | **Microsoft Defender for Cloud** | Compliance dashboard |
-| **Azure Purview** | Data discovery and classification |
+| **Microsoft Purview** | Data discovery and classification |
 | **Azure Key Vault** | Key management (EU region) |
 | **Private Endpoints** | Keep data off public internet |
 
@@ -243,6 +248,15 @@ Add to your existing whiteboard:
 
 ### What Just Happened?
 
+Welcome to the real world! Migration projects frequently encounter:
+
+- New compliance requirements discovered mid-project
+- Changes in the legal or regulatory landscape
+- Stakeholders who remember requirements late
+- Audit findings that force architecture changes
+
+The ability to adapt your plan is just as important as creating it!
+
 ---
 
 ## ⚠️ Watch out
@@ -250,18 +264,10 @@ Add to your existing whiteboard:
 - Do not assume EU compliance is only about primary data stores; include logs, backups, and replicas.
 - Revalidate DR and cross-region settings after architecture updates.
 
-Welcome to the real world! Migration projects frequently encounter:
-- New compliance requirements discovered mid-project.
-- Changes in legal/regulatory landscape.
-- Stakeholders who remember requirements late.
-- Audit findings that force architecture changes.
-
-The ability to adapt your plan is just as important as creating it!
-
 ---
 
 ## Next Step
 
-Proceed immediately to [Challenge 6: Optimize](06-optimize.md) to finalize your design with cost optimization and governance.
+Proceed immediately to [Challenge 6: Optimise](challenge-6-optimize/) to finalise your design with cost optimisation and governance.
 
 </details>

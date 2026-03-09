@@ -173,7 +173,7 @@ Design the governance structure:
 
 #### Management Group Hierarchy
 
-```
+```text
 Root Management Group
 ├── Platform
 │   ├── Identity
@@ -294,14 +294,14 @@ Impress the judges with advanced cost optimization:
 
 ---
 
-### Reflection Questions
-
----
-
 ## ⚠️ Watch out
 
 - Underestimating governance can erase savings through sprawl and misconfiguration.
 - Commit discounts should follow observed usage patterns, not assumptions.
+
+---
+
+### Reflection Questions
 
 - What surprised you about the cost estimates?
 - How does governance impact cost management?

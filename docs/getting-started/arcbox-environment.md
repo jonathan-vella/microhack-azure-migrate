@@ -17,43 +17,9 @@ Your team has access to an [Azure Jumpstart ArcBox for IT Pros](https://jumpstar
 
 ### Architecture Diagram
 
-```mermaid
-flowchart TB
-    subgraph Azure["Azure Cloud"]
-        direction TB
-        Portal["Azure Portal"]
-        Migrate["Azure Migrate Project"]
-        Arc["Azure Arc"]
-        Portal --> Migrate
-        Portal --> Arc
-    end
+![ArcBox for IT Pros architecture](../../assets/images/arch_itpro.png)
 
-    subgraph OnPrem["Simulated On-Premises - ArcBox"]
-        direction TB
-        subgraph HyperV["ArcBox-Client - Hyper-V Host"]
-            direction LR
-            subgraph Windows["Windows VMs"]
-                Win2K22["ArcBox-Win2K22\nWindows Server 2022\nApplication Server\n10.10.1.100"]
-                Win2K25["ArcBox-Win2K25\nWindows Server 2025\nFile Server\n10.10.1.101"]
-                SQL["ArcBox-SQL\nWindows + SQL 2022\nDatabase Server\n10.10.1.102"]
-            end
-            subgraph Linux["Linux VMs"]
-                Ubuntu01["ArcBox-Ubuntu-01\nUbuntu 22.04\nWeb Server\n10.10.1.103"]
-                Ubuntu02["ArcBox-Ubuntu-02\nUbuntu 22.04\nMonitoring\n10.10.1.104"]
-            end
-            subgraph Appliance["Your Deployment"]
-                MigrateAppliance["Azure Migrate\nAppliance\n- You deploy this -"]
-            end
-        end
-    end
-
-    MigrateAppliance -.->|"Discovery\nPort 5985/5986"| Win2K22
-    MigrateAppliance -.->|"Discovery"| Win2K25
-    MigrateAppliance -.->|"Discovery\n+ SQL Assessment"| SQL
-    MigrateAppliance -.->|"Discovery\nSSH"| Ubuntu01
-    MigrateAppliance -.->|"Discovery"| Ubuntu02
-    MigrateAppliance ==>|"HTTPS 443\nMetadata Upload"| Migrate
-```
+*Source: [Azure Arc Jumpstart — ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro)*
 
 ---
 
