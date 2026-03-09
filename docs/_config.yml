@@ -15,7 +15,7 @@ color_scheme: light
 
 # Site branding
 logo: "/assets/images/logo.svg"
-favicon_ico: "/assets/images/favicon.ico"
+favicon_ico: "/assets/images/favicon.svg"
 
 # Search
 search_enabled: true

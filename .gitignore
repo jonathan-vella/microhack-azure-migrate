@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Jekyll build output
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+
+# Workshop runtime files
+workshop-scores.json
