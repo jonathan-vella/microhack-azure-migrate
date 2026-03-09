@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-bicep",
+    "ms-vscode.azurecli",
+    "ms-vscode.powershell",
+    "ms-azuretools.vscode-azureresourcegroups",
+    "DavidAnson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-mermaid",
+    "redhat.vscode-yaml",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "sissel.shopify-liquid"
+  ]
+}

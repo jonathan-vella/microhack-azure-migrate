@@ -1,121 +1,121 @@
-# Azure Migration Workshop: From On-Premises to Azure
+# Azure Migration Workshop
 
-<p align="center">
-    <img src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:0ea5e9,50:2563eb,100:7c3aed&text=Azure%20Migration%20Workshop&fontColor=ffffff&fontSize=52&fontAlignY=38&desc=From%20On-Premises%20to%20Azure%20%E2%80%A2%20Hands-On%20Labs%20%2B%20WDS&descAlignY=58&descSize=18" alt="Azure Migration Workshop Banner" />
-</p>
+> 1-Day Workshop: Discover, assess, and plan Azure migrations using hands-on
+> labs and whiteboard design sessions, aligned to the Cloud Adoption Framework.
 
-A **1-day hands-on workshop** for IT Professionals combining Azure Migrate appliance labs with whiteboard design sessions, aligned to the [Cloud Adoption Framework Migrate methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/).
+## Overview
 
-## 🎯 Workshop Overview
+This repository contains workshop documentation, facilitator guides, and
+governance scripts. End-user guidance is published at
+[jonathan-vella.github.io/microhack-azure-migrate](https://jonathan-vella.github.io/microhack-azure-migrate/).
 
-| Attribute | Details |
-|-----------|---------|
-| **Duration** | 1 day (7 hours: 10:00 - 17:00) |
-| **Format** | In-person, team-based |
-| **Team Size** | 4 people per team (self-organizing) |
-| **Scoring** | 100 points + bonus opportunities |
-| **Lab Environment** | [Azure Jumpstart ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro) (simulated on-prem) |
+| | |
+|---|---|
+| This repo (microhack-azure-migrate) | Workshop docs, facilitator guides, scoring rubric, governance scripts |
 
-## 🏆 Learning Objectives
+Teams work through 7 challenges covering the full Azure migration lifecycle —
+from discovery and assessment through to cost optimisation and a final
+chalk-talk presentation — all using Azure Migrate and
+[ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro)
+as the simulated on-premises environment.
 
-By the end of this workshop, participants will be able to:
+What you'll experience:
 
-- **Discover** on-premises workloads using Azure Migrate appliance
-- **Assess** migration readiness for VMs and SQL databases
-- **Design** a migration strategy using CAF Migrate methodology
-- **Plan** migration waves with dependency mapping
-- **Optimize** for cost, governance, and hybrid scenarios with Azure Arc
-- **Respond** to real-world constraints (compliance, cost, dependencies)
+- Azure Migrate appliance deployment and discovery
+- VM and SQL readiness assessments
+- Migration wave planning with dependency mapping
+- A mid-event "curveball" that tests your adaptability
+- Cost optimisation, governance design, and Azure Arc
+- A competitive team presentation with live objection handling
 
-## 📋 Prerequisites
+## Learning Objectives
 
-### For Participants
+1. Discover on-premises workloads using Azure Migrate appliance
+2. Assess migration readiness for VMs and SQL databases
+3. Design a migration strategy using CAF Migrate methodology
+4. Plan migration waves with proper sequencing and dependencies
+5. Optimise for cost, governance, and hybrid scenarios
 
-- [ ] Basic Azure portal familiarity (complete [Pre-work: Azure 101](docs/challenges/00-azure-101.md) beforehand)
-- [ ] Laptop with modern browser (Edge or Chrome recommended)
-- [ ] Access to team's Azure subscription (provided by facilitator)
+## The Scenario: Contoso Bakery
 
-### For Facilitators
+A Dublin-based artisan bakery (65 employees, €10M revenue) needs to migrate
+its aging 5-server estate to Azure. Your team will assess the environment,
+design a CAF-aligned migration strategy, and present a complete plan — all
+within a single day.
 
-- [ ] Pre-deployed ArcBox ITPro environment per team
-- [ ] Azure subscription with Owner access per team
-- [ ] Completed [Pre-Deployment Guide](docs/audiences/facilitator/pre-deployment-guide.md)
+## Hackathon Day Schedule
 
-## 🗺️ Workshop Flow
+| Time | Block | Duration | Description |
+|---|---|---|---|
+| 10:00–10:30 | Intro | 30 min | Welcome, setup, scenario intro |
+| 10:30–11:15 | Challenge 1 | 45 min | Plan & Design (WDS) |
+| 11:15–12:30 | Challenge 2 | 75 min | Deploy Appliance (Hands-on) |
+| 12:30–13:15 | Lunch | 45 min | Break (discovery runs) |
+| 13:15–14:00 | Challenge 3 | 45 min | Assessment (Hands-on) |
+| 14:00–14:30 | Challenge 4 | 30 min | Execute (WDS) |
+| 14:30–14:45 | Break | 15 min | Rest & recharge |
+| 14:45–15:15 | Challenge 5 | 30 min | Curveball (WDS) |
+| 15:15–16:00 | Challenge 6 | 45 min | Optimise (WDS) |
+| 16:00–16:45 | Challenge 7 | 45 min | Presentation |
+| 16:45–17:00 | Wrap-up | 15 min | Leaderboard, cleanup, close |
 
-```mermaid
-graph LR
-    subgraph "Morning - CAF Plan & Prepare"
-        C0["Pre-work<br/>Azure 101"] -.-> C1["Challenge 1<br/>Plan & Design"]
-        C1 --> C2["Challenge 2<br/>Deploy Appliance"]
-    end
-    
-    subgraph "Afternoon - CAF Execute & Optimize"
-        C2 --> C3["Challenge 3<br/>Assess Workloads"]
-        C3 --> C4["Challenge 4<br/>Migration Strategy"]
-        C4 --> C5["Challenge 5<br/>🎲 Curveball"]
-        C5 --> C6["Challenge 6<br/>Optimize & Govern"]
-        C6 --> C7["Challenge 7<br/>Present"]
-    end
+## Repository Structure
+
+```
+docs/                   # GitHub Pages site (just-the-docs theme)
+facilitator/            # Facilitator guide, scoring rubric, solution reference
+scripts/                # Workshop PowerShell scripts
 ```
 
-## 📁 Repository Structure
+## Markdown Checks
 
-```
-azure-migrate-wds/
-├── README.md                    # You are here
-├── AGENDA.md                    # Detailed schedule
-├── feedback-form.md             # Workshop feedback form
-├── docs/                        # Canonical workshop documentation tree
-│   ├── workshop/                # Workshop hub
-│   ├── challenges/              # Challenges 00-07
-│   ├── audiences/               # Participant and facilitator docs
-│   └── operations/scripts/      # Script documentation
-└── scripts/                     # PowerShell automation scripts
-```
+This repository uses `markdownlint-cli2` for Markdown linting and `lefthook`
+for Git hooks.
 
-## 🚀 Quick Start
+- Run `npm install` once after cloning to install dependencies and register the
+  `pre-commit` hook.
+- Run `npm run lint:md` to lint all Markdown files in the repository.
 
-### Participants
+## Sensitive-Content Review Checklist
 
-1. Review [Pre-Work Checklist](docs/audiences/participant/pre-work-checklist.md)
-2. Read [Scenario Brief](docs/audiences/participant/scenario-brief.md)
-3. Print [Quick Reference Card](docs/audiences/participant/quick-reference-card.md)
-4. Ensure [Pre-work: Azure 101](docs/challenges/00-azure-101.md) is complete, then start Challenge 1
+Before merging changes that involve permissions, policies, costs, cleanup, or
+real Azure actions, apply this checklist:
 
-### Facilitators
+- **Azure roles and permissions**: Are stated role requirements accurate?
+- **Subscription model**: Does the change maintain one-subscription-per-team?
+- **Cost and quota**: Are budget figures, SKU recommendations, and quota
+  guidance still accurate?
+- **Cleanup and post-event**: Are verification steps included?
+- **Secret handling**: Does the change avoid embedding real secrets?
+- **Script safety**: Do script changes preserve `-WhatIf` support and
+  idempotent behaviour?
+- **Scoring accuracy**: Does the change keep scoring language consistent with
+  the rubric?
+- **Terminology**: Does the change follow the
+  [glossary](docs/reference/glossary.md)?
 
-1. Complete [Pre-Deployment Guide](docs/audiences/facilitator/pre-deployment-guide.md) (day before)
-2. Review [Facilitator Guide](docs/audiences/facilitator/facilitator-guide.md)
-3. Prepare [Scoring Rubric](docs/audiences/facilitator/scoring-rubric.md)
-4. Keep [Curveball Script](docs/audiences/facilitator/curveball-script.md) secret until 14:45!
+## Getting Started
 
-## 🏅 Scoring Overview
+1. Read [Getting Started](https://jonathan-vella.github.io/microhack-azure-migrate/getting-started/)
+   for pre-work, setup, and ArcBox environment details.
+2. Review [Workshop Prep](https://jonathan-vella.github.io/microhack-azure-migrate/getting-started/workshop-prep/)
+   for the Contoso Bakery scenario brief and team roles.
+3. Follow the challenges in order starting from
+   [Challenge 1](https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-1-plan/).
 
-| Challenge | Points | Focus Area |
-|-----------|--------|------------|
-| Challenge 1: Plan | 25 | Assessment strategy, wave prioritization |
-| Challenge 2: Appliance | 25 | Azure Migrate deployment, discovery |
-| Challenge 3: Assessment | 20 | Readiness analysis, findings |
-| Challenge 4: Execute | 15 | Tool selection, rollback planning |
-| Challenge 5: Curveball | 10 | Adapt to GDPR compliance |
-| Challenge 7: Presentation | 5 | Chalk-talk, objection handling |
-| **Total** | **100** | |
-| Bonus | +15 | Arc, cost optimization, security |
+## Quick Links
 
-## 🔗 Key Resources
+| Resource | Description |
+|---|---|
+| [Workshop Docs](https://jonathan-vella.github.io/microhack-azure-migrate/) | Published setup and guidance for participants |
+| [Agenda](https://jonathan-vella.github.io/microhack-azure-migrate/about/agenda/) | Full schedule with timing |
+| [Quick Reference Card](https://jonathan-vella.github.io/microhack-azure-migrate/guides/quick-reference-card/) | Printable one-page cheat sheet |
+| [Scoring Rubric](facilitator/scoring-rubric.md) | WAF-aligned evaluation criteria |
+| [Troubleshooting](https://jonathan-vella.github.io/microhack-azure-migrate/reference/troubleshooting/) | Common issues and fixes |
 
-- [Cloud Adoption Framework - Migrate](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/)
-- [Azure Migrate Documentation](https://learn.microsoft.com/azure/migrate/)
-- [Azure Jumpstart ArcBox](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro)
-- [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
+## License
 
-## 📞 Support
-
-- **During Workshop**: Raise hand for facilitator assistance
-- **Technical Issues**: Check [Hints and Tips](docs/audiences/participant/hints-and-tips.md)
-- **Post-Workshop**: [Feedback Form](feedback-form.md)
-
----
+This project is provided for educational and workshop use. See the repository
+for license details.
 
 **Ready to begin?** Complete the [Pre-work: Azure 101](docs/challenges/00-azure-101.md), then head to the [Agenda](AGENDA.md) for the detailed schedule.
