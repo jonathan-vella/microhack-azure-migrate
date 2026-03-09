@@ -75,6 +75,7 @@ Before starting this challenge, ensure:
    - Dependencies (if enabled)
 
 ✅ **Verify**:
+
 - [ ] At least 5 servers discovered
 - [ ] Can view server details
 
@@ -111,6 +112,7 @@ Before starting this challenge, ensure:
    - Review **Monthly cost estimate**
 
 ✅ **Verify**:
+
 - [ ] Assessment created
 - [ ] Readiness results visible
 - [ ] Cost estimate generated
@@ -143,11 +145,13 @@ Click into your assessment and explore each section:
 #### Cost Breakdown
 
 Review the cost details:
+
 - Compute costs (VM hours)
 - Storage costs (disk types)
 - Total monthly estimate
 
 **Questions to answer**:
+
 - What's the total monthly cost estimate?
 - Which server is the most expensive? Why?
 - What disk types are recommended?
@@ -167,6 +171,7 @@ Look at the **confidence rating** (1-5 stars):
 > 💡 **Tip**: Lower confidence often means discovery hasn't run long enough for performance data
 
 ✅ **Verify**:
+
 - [ ] Documented readiness for all servers
 - [ ] Noted cost estimate
 - [ ] Checked confidence rating
@@ -197,11 +202,13 @@ Look at the **confidence rating** (1-5 stars):
    - Database compatibility
 
 **Questions to answer**:
+
 - What Azure SQL target is recommended?
 - Are there any compatibility issues?
 - What's the estimated SQL cost?
 
 ✅ **Verify**:
+
 - [ ] SQL assessment created
 - [ ] Target recommendation noted
 - [ ] Compatibility reviewed
@@ -289,4 +296,4 @@ This data drives migration decisions!
 
 ## Next Step
 
-Bring your assessment findings to [Challenge 4: Execute](04-execute.md) where you'll design the detailed migration strategy.
+Bring your assessment findings to [Challenge 4: Execute](challenge-4-execute/) where you'll design the detailed migration strategy.

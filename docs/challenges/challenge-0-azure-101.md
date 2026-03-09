@@ -51,6 +51,7 @@ Before starting this challenge, ensure:
    - **Cloud Shell** — Built-in command line
 
 ✅ **Verify**: Can you find the following?
+
 - [ ] Your subscription name
 - [ ] The resource groups in your subscription
 - [ ] The Azure Migrate service
@@ -84,6 +85,7 @@ Before starting this challenge, ensure:
 3. Click into it and explore the resources
 
 ✅ **Verify**: Answer these questions:
+
 - [ ] What is your subscription ID? (Write it down)
 - [ ] What resource group contains your ArcBox environment?
 - [ ] How many resources are in that resource group?
@@ -108,6 +110,7 @@ Before starting this challenge, ensure:
 4. Note your assigned role(s)
 
 ✅ **Verify**:
+
 - [ ] What role do you have on this subscription?
 
 ---
@@ -124,6 +127,7 @@ Azure Migrate is the hub for migration tools. Let's find it.
    - **Migration tools** — For executing migrations
 
 ✅ **Verify**:
+
 - [ ] Can you navigate to Azure Migrate?
 - [ ] Do you see the "Discover, assess and migrate" section?
 
@@ -187,4 +191,4 @@ Complete this checklist before proceeding:
 
 ## Next Step
 
-Once your team has completed all verification items, proceed to the [Scenario Introduction](../audiences/participant/scenario-brief.md), then continue to [Challenge 1: Plan](01-plan.md).
+Once your team has completed all verification items, proceed to the [Scenario Introduction](../getting-started/workshop-prep/), then continue to [Challenge 1: Plan](challenge-1-plan/).

@@ -111,6 +111,7 @@ After your presentation, facilitators will raise **3 objections** you must addre
 > "Why are you migrating the SQL database to IaaS VMs? Shouldn't we use Azure SQL Managed Instance for better PaaS benefits?"
 
 **Prepare to discuss**:
+
 - Your rationale for target choice
 - Trade-offs between IaaS and PaaS
 - When PaaS makes sense vs IaaS
@@ -120,6 +121,7 @@ After your presentation, facilitators will raise **3 objections** you must addre
 > "What happens if the web server migration fails during a critical business period? Walk me through exactly how you'd roll back."
 
 **Prepare to discuss**:
+
 - Specific rollback steps
 - Timeline for rollback
 - Data synchronization challenges
@@ -129,6 +131,7 @@ After your presentation, facilitators will raise **3 objections** you must addre
 > "How can you guarantee that customer data will never leave the EU region, including backups and disaster recovery?"
 
 **Prepare to discuss**:
+
 - Target regions for all data
 - Backup and DR strategy
 - Monitoring and enforcement
@@ -195,7 +198,7 @@ gantt
 
 ## 💡 Tip
 
-### Do:
+### Do
 
 - ✅ Use your whiteboard photos as visual aids.
 - ✅ Have different team members present different sections.
@@ -203,7 +206,7 @@ gantt
 - ✅ Acknowledge trade-offs and risks honestly.
 - ✅ Be concise — every second counts.
 
-### Don't:
+### Don't
 
 - ❌ Read from notes word-for-word.
 - ❌ Go over time (you will be cut off).
@@ -268,6 +271,7 @@ Each team shares one thing they appreciated about another team's approach.
 ### Key Takeaways
 
 Facilitator-led discussion:
+
 - What did you learn today?
 - What will you apply in your real work?
 - What questions remain?
@@ -299,7 +303,7 @@ Congratulations on completing the Azure Migration Workshop!
 
 ### Next Steps
 
-1. **Complete the [Feedback Form](../../feedback-form.md)**
+1. **Complete the [Feedback Form](../about/feedback/)**
 2. **Cleanup resources** — Run the cleanup script
 3. **Stay connected**:
    - [Azure Migrate documentation](https://learn.microsoft.com/azure/migrate/)

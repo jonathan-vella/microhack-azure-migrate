@@ -158,6 +158,7 @@ Not everything may migrate to Azure. Design a hybrid strategy:
 **Design Exercise**:
 
 If some servers must remain on-premises:
+
 - Which servers would stay? (e.g., latency requirements, regulations)
 - How would you manage them alongside Azure?
 - What policies would apply to both environments?
@@ -273,6 +274,7 @@ Add to your whiteboard:
 ### Reference: Well-Architected Framework - Cost Optimization
 
 Key principles:
+
 1. **Plan and estimate costs** — Before deployment
 2. **Provision with optimization** — Right-size from start
 3. **Use monitoring and analytics** — Track spending
@@ -309,4 +311,4 @@ Impress the judges with advanced cost optimization:
 
 ## Next Step
 
-Prepare for [Challenge 7: Presentation](07-presentation.md) — Time to present your complete migration strategy!
+Prepare for [Challenge 7: Presentation](challenge-7-presentation/) — Time to present your complete migration strategy!

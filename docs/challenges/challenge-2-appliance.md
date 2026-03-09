@@ -43,7 +43,7 @@ Before starting this challenge, ensure:
 - [ ] You completed the Azure 101 pre-work
 - [ ] You can access the Azure portal
 - [ ] Your facilitator has confirmed ArcBox is deployed and ready
-- [ ] You have the ArcBox VM credentials (see [ArcBox Environment](../audiences/participant/arcbox-environment.md))
+- [ ] You have the ArcBox VM credentials (see [ArcBox Environment](../getting-started/arcbox-environment/))
 
 ---
 
@@ -78,6 +78,7 @@ Before starting this challenge, ensure:
    > ⚠️ **Watch out**: Copy this key and save it — you'll need it for registration!
 
 ✅ **Verify**:
+
 - [ ] Azure Migrate project created
 - [ ] Project key generated and saved
 
@@ -122,6 +123,7 @@ Before starting this challenge, ensure:
    - Set administrator password (document this!)
 
 ✅ **Verify**:
+
 - [ ] VHD downloaded
 - [ ] Appliance imported into Hyper-V
 - [ ] Appliance VM running
@@ -160,6 +162,7 @@ Before starting this challenge, ensure:
    g. Verify: **"Successfully registered"**
 
 ✅ **Verify**:
+
 - [ ] Appliance configuration manager accessible
 - [ ] Prerequisites passed
 - [ ] Appliance registered with Azure
@@ -198,9 +201,10 @@ Before starting this challenge, ensure:
    | Linux | `LinuxAdmin` | arcbox | Ubuntu VMs |
    | SQL Server | `SQLAdmin` | sa (if applicable) | SQL instance discovery |
 
-   > 💡 **Tip**: Get exact credentials from [ArcBox Environment](../audiences/participant/arcbox-environment.md)
+   > 💡 **Tip**: Get exact credentials from [ArcBox Environment](../getting-started/arcbox-environment/)
 
 ✅ **Verify**:
+
 - [ ] Hyper-V host credentials added
 - [ ] Hyper-V host validated successfully
 - [ ] Server credentials added (Windows, Linux)
@@ -229,6 +233,7 @@ Before starting this challenge, ensure:
      - ArcBox-Ubuntu-02
 
 ✅ **Verify**:
+
 - [ ] Discovery started successfully
 - [ ] Servers beginning to appear in Azure portal
 
@@ -306,4 +311,4 @@ This is exactly how real migrations begin — with discovery!
 
 ⏸️ **Break for Lunch** — Discovery will continue running.
 
-After lunch, verify your discovered servers and proceed to [Challenge 3: Assessment](03-assessment.md).
+After lunch, verify your discovered servers and proceed to [Challenge 3: Assessment](challenge-3-assessment/).
