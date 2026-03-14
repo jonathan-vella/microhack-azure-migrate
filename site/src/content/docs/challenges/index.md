@@ -2,7 +2,7 @@
 title: Challenges
 description: "7 challenges across the full migration lifecycle — from planning through to final presentations"
 sidebar:
-  order: 3
+  hidden: true
 ---
 
 

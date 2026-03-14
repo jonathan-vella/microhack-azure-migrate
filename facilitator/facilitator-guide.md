@@ -55,7 +55,7 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 
 **Your Actions**:
 
-- Present the Contoso Bakery scenario (use [Workshop Prep](../docs/getting-started/workshop-prep.md))
+- Present the Contoso Bakery scenario (use [Workshop Prep](../site/src/content/docs/getting-started/workshop-prep.md))
 - Facilitate team formation (4 per team)
 - Walk through ArcBox environment overview
 - Answer questions about the scenario constraints

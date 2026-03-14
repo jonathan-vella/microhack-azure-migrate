@@ -2,7 +2,7 @@
 title: Getting Started
 description: "Set up your environment, check prerequisites, and learn the scenario"
 sidebar:
-  order: 2
+  hidden: true
 ---
 
 
