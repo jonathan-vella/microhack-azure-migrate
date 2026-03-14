@@ -57,7 +57,10 @@ export default defineConfig({
           autogenerate: { directory: "about" },
         },
       ],
-      customCss: ["./src/styles/custom.css"],
+      customCss: [
+        "@fontsource-variable/inter",
+        "./src/styles/custom.css",
+      ],
       components: {
         Footer: "./src/components/Footer.astro",
       },

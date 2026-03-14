@@ -1,5 +1,10 @@
 /* Azure Migration MicroHack — Custom Theme */
 
+/* Typography */
+:root {
+  --sl-font: "Inter Variable", system-ui, sans-serif;
+}
+
 /* Azure color palette */
 :root {
   --sl-color-accent-low: #002b4d;
