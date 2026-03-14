@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: WDS
     variant: tip
+prev:
+  link: ../challenge-0-azure-101/
+  label: "Challenge 0: Azure 101"
+next:
+  link: ../challenge-2-appliance/
+  label: "Challenge 2: Deploy Appliance"
 ---
 
 
@@ -168,7 +174,7 @@ By the end of this challenge, your whiteboard should show:
 
 Use this template to capture your team's decisions:
 
-```markdown
+```markdown title="Team Planning Template"
 ### Team: ________________
 
 ### Assessment Strategy

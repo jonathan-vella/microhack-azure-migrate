@@ -6,6 +6,10 @@ sidebar:
   badge:
     text: Present
     variant: default
+prev:
+  link: ../challenge-6-optimize/
+  label: "Challenge 6: Optimise"
+next: false
 ---
 
 

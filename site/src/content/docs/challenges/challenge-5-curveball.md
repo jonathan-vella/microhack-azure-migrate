@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: WDS
     variant: caution
+prev:
+  link: ../challenge-4-execute/
+  label: "Challenge 4: Execute"
+next:
+  link: ../challenge-6-optimize/
+  label: "Challenge 6: Optimise"
 ---
 
 

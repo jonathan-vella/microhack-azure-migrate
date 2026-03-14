@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: WDS
     variant: tip
+prev:
+  link: ../challenge-5-curveball/
+  label: "Challenge 5: Curveball"
+next:
+  link: ../challenge-7-presentation/
+  label: "Challenge 7: Presentation"
 ---
 
 
@@ -176,7 +182,7 @@ Design the governance structure:
 
 #### Management Group Hierarchy
 
-```text
+```text title="Azure Management Group Hierarchy"
 Root Management Group
 ├── Platform
 │   ├── Identity

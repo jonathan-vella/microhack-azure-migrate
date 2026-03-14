@@ -30,7 +30,7 @@ These scripts are for **facilitators only**. Participants do not need to run the
 
 ### Score a Team
 
-```powershell
+```powershell title="Score-Team.ps1"
 .\scripts\Score-Team.ps1 -TeamName "team1" -Challenge "C1" -Score 20
 ```
 
@@ -48,7 +48,7 @@ Scores are capped at the maximum for each challenge.
 
 ### Display Leaderboard
 
-```powershell
+```powershell title="Get-Leaderboard.ps1"
 .\scripts\Get-Leaderboard.ps1
 ```
 
@@ -60,7 +60,7 @@ Shows real-time rankings with medals for top 3 teams. Use `-Detailed` for breakd
 
 ### Cleanup Resources
 
-```powershell
+```powershell title="Cleanup-Resources.ps1"
 .\scripts\Cleanup-Resources.ps1
 ```
 

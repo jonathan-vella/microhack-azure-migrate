@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: Hands-on
     variant: success
+prev:
+  link: ../challenge-2-appliance/
+  label: "Challenge 2: Deploy Appliance"
+next:
+  link: ../challenge-4-execute/
+  label: "Challenge 4: Execute"
 ---
 
 

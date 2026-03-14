@@ -6,6 +6,10 @@ sidebar:
   badge:
     text: Pre-work
     variant: note
+prev: false
+next:
+  link: ../challenge-1-plan/
+  label: "Challenge 1: Plan"
 ---
 
 

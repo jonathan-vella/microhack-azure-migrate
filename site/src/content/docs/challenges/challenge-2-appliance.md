@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: Hands-on
     variant: success
+prev:
+  link: ../challenge-1-plan/
+  label: "Challenge 1: Plan"
+next:
+  link: ../challenge-3-assessment/
+  label: "Challenge 3: Assessment"
 ---
 
 

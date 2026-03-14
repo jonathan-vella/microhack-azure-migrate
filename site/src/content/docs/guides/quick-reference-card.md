@@ -112,7 +112,7 @@ PLAN → PREPARE → EXECUTE → OPTIMISE → DECOMMISSION
 
 ## Notes
 
-```text
+```text title="Team Information"
 Team Name: _______________________
 
 Subscription ID: _______________________

@@ -6,6 +6,12 @@ sidebar:
   badge:
     text: WDS
     variant: tip
+prev:
+  link: ../challenge-3-assessment/
+  label: "Challenge 3: Assessment"
+next:
+  link: ../challenge-5-curveball/
+  label: "Challenge 5: Curveball"
 ---
 
 
@@ -179,7 +185,7 @@ For each wave, document:
 3. **DNS/Network** — How to redirect traffic?
 4. **Timeline** — How long until rollback is no longer possible?
 
-```text
+```text title="Rollback Procedure Template"
 ROLLBACK PROCEDURE - WAVE 1
 ├── Trigger: [who decides, based on what]
 ├── Step 1: Stop application in Azure

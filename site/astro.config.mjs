@@ -16,6 +16,7 @@ export default defineConfig({
       title: "Azure Migration MicroHack",
       description:
         "1-day hands-on MicroHack: Discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework.",
+      favicon: "/images/favicon.svg",
       logo: {
         src: "./src/assets/images/logo.svg",
       },
@@ -57,10 +58,7 @@ export default defineConfig({
           autogenerate: { directory: "about" },
         },
       ],
-      customCss: [
-        "@fontsource-variable/inter",
-        "./src/styles/custom.css",
-      ],
+      customCss: ["@fontsource-variable/inter", "./src/styles/custom.css"],
       components: {
         Footer: "./src/components/Footer.astro",
       },
