@@ -1,17 +1,17 @@
-# Azure Migration Workshop
+# Azure Migration MicroHack
 
-> 1-Day Workshop: Discover, assess, and plan Azure migrations using hands-on
+> 1-Day MicroHack: Discover, assess, and plan Azure migrations using hands-on
 > labs and whiteboard design sessions, aligned to the Cloud Adoption Framework.
 
 ## Overview
 
-This repository contains workshop documentation, facilitator guides, and
+This repository contains MicroHack documentation, facilitator guides, and
 governance scripts. End-user guidance is published at
 [jonathan-vella.github.io/microhack-azure-migrate](https://jonathan-vella.github.io/microhack-azure-migrate/).
 
 | | |
 |---|---|
-| This repo (microhack-azure-migrate) | Workshop docs, facilitator guides, scoring rubric, governance scripts |
+| This repo (microhack-azure-migrate) | MicroHack docs, facilitator guides, scoring rubric, governance scripts |
 
 Teams work through 7 challenges covering the full Azure migration lifecycle —
 from discovery and assessment through to cost optimisation and a final
@@ -64,7 +64,7 @@ within a single day.
 ```text
 site/                   # Astro Starlight documentation site
 facilitator/            # Facilitator guide, scoring rubric, solution reference
-scripts/                # Workshop PowerShell scripts
+scripts/                # MicroHack PowerShell scripts
 ```
 
 ## Markdown Checks
@@ -108,7 +108,7 @@ real Azure actions, apply this checklist:
 
 | Resource | Description |
 |---|---|
-| [Workshop Docs](https://jonathan-vella.github.io/microhack-azure-migrate/) | Published setup and guidance for participants |
+| [MicroHack Docs](https://jonathan-vella.github.io/microhack-azure-migrate/) | Published setup and guidance for participants |
 | [Agenda](https://jonathan-vella.github.io/microhack-azure-migrate/about/agenda/) | Full schedule with timing |
 | [Quick Reference Card](https://jonathan-vella.github.io/microhack-azure-migrate/guides/quick-reference-card/) | Printable one-page cheat sheet |
 | [Scoring Rubric](facilitator/scoring-rubric.md) | WAF-aligned evaluation criteria |

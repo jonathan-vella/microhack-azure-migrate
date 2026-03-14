@@ -19,7 +19,7 @@ sidebar:
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 gantt
-  title Azure Migration Workshop (10:00 – 17:00)
+  title Azure Migration MicroHack (10:00 – 17:00)
   dateFormat HH:mm
   axisFormat %H:%M
   section Morning

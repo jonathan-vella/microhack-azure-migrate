@@ -12,7 +12,7 @@ Complete these steps **before the workshop** (ideally the day before).
 | Verify deployments | 10 min per team | Day before |
 | Prepare Azure subscriptions | 30 min total | Day before |
 | Pre-download Azure Migrate VHD | 20 min | Day before |
-| Day-of verification | 5 min per team | Workshop morning |
+| Day-of verification | 5 min per team | MicroHack morning |
 
 ---
 
@@ -362,9 +362,9 @@ Run through this 30 minutes before workshop starts:
 
 ---
 
-## Cleanup After Workshop
+## Cleanup After MicroHack
 
-Run the cleanup script after the workshop:
+Run the cleanup script after the MicroHack:
 
 ```powershell
 # Delete all ArcBox resource groups
@@ -390,7 +390,7 @@ foreach ($team in $teams) {
 - [ ] WinRM configured
 - [ ] Credentials documented
 
-**Morning of Workshop:**
+**Morning of MicroHack:**
 
 - [ ] All ArcBox-Client VMs running
 - [ ] All nested VMs running

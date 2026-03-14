@@ -6,7 +6,7 @@ sidebar:
 ---
 
 
-# Workshop Scripts
+# MicroHack Scripts
 
 PowerShell scripts for workshop automation. These are located in the `scripts/` directory at the repository root.
 
@@ -26,7 +26,7 @@ These scripts are for **facilitators only**. Participants do not need to run the
 
 ---
 
-## During the Workshop
+## During the MicroHack
 
 ### Score a Team
 
@@ -56,7 +56,7 @@ Shows real-time rankings with medals for top 3 teams. Use `-Detailed` for breakd
 
 ---
 
-## After the Workshop
+## After the MicroHack
 
 ### Cleanup Resources
 

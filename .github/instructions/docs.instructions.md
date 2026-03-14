@@ -1,6 +1,6 @@
 ---
 description: "Standards for user-facing documentation in this workshop repository"
-applyTo: "docs/**/*.md, README.md, AGENDA.md, feedback-form.md"
+applyTo: "site/src/content/docs/**/*.md, README.md, AGENDA.md, feedback-form.md"
 ---
 
 # Documentation Standards
@@ -18,10 +18,10 @@ applyTo: "docs/**/*.md, README.md, AGENDA.md, feedback-form.md"
 
 ## Challenge Template Requirements
 
-- New challenge guides in `docs/challenges/` must follow the canonical structure in
-	`.github/skills/challenge-guide-styler/references/challenge-template.md`.
+- New challenge guides in `site/src/content/docs/challenges/` must follow the canonical structure in
+  `.github/skills/challenge-guide-styler/references/challenge-template.md`.
 - Required sections: `Challenge Snapshot`, `Objective`, `The Business Challenge`, `Your Tasks`,
-	`Expected Deliverables`, and `Success Criteria`.
+  `Expected Deliverables`, and `Success Criteria`.
 - Keep challenge guides participant-friendly: concise, scannable, and task-first.
 
 ## Consistency Checks

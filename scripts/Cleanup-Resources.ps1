@@ -33,7 +33,7 @@ param(
 # Banner
 Write-Host @"
 ╔══════════════════════════════════════════════════════════════╗
-║         Azure Migration Workshop - Resource Cleanup           ║
+║         Azure Migration MicroHack - Resource Cleanup           ║
 ╚══════════════════════════════════════════════════════════════╝
 "@ -ForegroundColor Red
 
@@ -45,11 +45,11 @@ $resourceGroups = @()
 foreach ($team in $Teams) {
     $arcboxRg = "rg-arcbox-$team"
     $migrateRg = "rg-migrate-$team"
-    
+
     # Check if they exist
     $arcboxExists = az group exists --name $arcboxRg
     $migrateExists = az group exists --name $migrateRg
-    
+
     if ($arcboxExists -eq "true") {
         Write-Host "   - $arcboxRg" -ForegroundColor Gray
         $resourceGroups += $arcboxRg
@@ -91,10 +91,10 @@ Write-Host "`n🗑️  Deleting resource groups..." -ForegroundColor Yellow
 $jobs = @()
 foreach ($rg in $resourceGroups) {
     Write-Host "   Deleting $rg (async)..." -ForegroundColor Gray
-    
+
     # Delete asynchronously
     az group delete --name $rg --yes --no-wait
-    
+
     $jobs += @{
         ResourceGroup = $rg
         Status = "Deleting"
@@ -109,15 +109,15 @@ $waitForCompletion = Read-Host "`nWould you like to wait and verify deletion? (y
 
 if ($waitForCompletion -eq "yes") {
     Write-Host "`nWaiting for deletions to complete..." -ForegroundColor Yellow
-    
+
     $allDeleted = $false
     $attempts = 0
     $maxAttempts = 30  # 30 minutes max wait
-    
+
     while (-not $allDeleted -and $attempts -lt $maxAttempts) {
         Start-Sleep -Seconds 60
         $attempts++
-        
+
         $allDeleted = $true
         foreach ($rg in $resourceGroups) {
             $exists = az group exists --name $rg
@@ -130,7 +130,7 @@ if ($waitForCompletion -eq "yes") {
             }
         }
     }
-    
+
     if ($allDeleted) {
         Write-Host "`n✅ All resource groups deleted successfully!" -ForegroundColor Green
     }

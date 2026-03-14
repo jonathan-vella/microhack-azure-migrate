@@ -6,17 +6,17 @@ sidebar:
 ---
 
 
-# Workshop Email Invite Template
+# MicroHack Email Invite Template
 
 ---
 
-**Subject:** You're Invited: Azure Migration Workshop — Hands-On Training
+**Subject:** You're Invited: Azure Migration MicroHack — Hands-On Training
 
 ---
 
 Hi Team,
 
-You're invited to join us for a **1-day Azure Migration Workshop** where you'll gain practical experience migrating workloads to Azure using real-world scenarios.
+You're invited to join us for a **1-day Azure Migration MicroHack** where you'll gain practical experience migrating workloads to Azure using real-world scenarios.
 
 ## Details
 

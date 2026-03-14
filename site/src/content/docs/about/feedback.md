@@ -8,7 +8,7 @@ sidebar:
 
 # Post-Workshop Feedback
 
-Thank you for participating in the Azure Migration Workshop! Your feedback helps us improve future sessions.
+Thank you for participating in the Azure Migration MicroHack! Your feedback helps us improve future sessions.
 
 :::tip
 Please take 5 minutes to complete this feedback form.

@@ -7,7 +7,7 @@ description: Applies the workshop challenge template and visual polish consisten
 
 ## Purpose and Trigger Conditions
 
-Use this skill when creating or revising files in `docs/challenges/` that need consistent structure,
+Use this skill when creating or revising files in `site/src/content/docs/challenges/` that need consistent structure,
 clear timeboxing, and polished participant-facing readability.
 
 ## Inputs Required From Repository Context
@@ -15,9 +15,9 @@ clear timeboxing, and polished participant-facing readability.
 - `.github/skills/challenge-guide-styler/references/challenge-template.md`
 - `README.md`
 - `AGENDA.md`
-- `docs/challenges/README.md`
-- `docs/audiences/participant/README.md`
-- `docs/audiences/facilitator/scoring-rubric.md`
+- `site/src/content/docs/challenges/index.md`
+- `site/src/content/docs/`
+- `facilitator/scoring-rubric.md`
 
 ## Output Format and Quality Criteria
 
@@ -34,8 +34,8 @@ clear timeboxing, and polished participant-facing readability.
 
 ## Examples
 
-- Refresh challenge structure in `docs/challenges/01-plan.md` using
+- Refresh challenge structure in `site/src/content/docs/challenges/challenge-1-plan.md` using
   `.github/skills/challenge-guide-styler/references/challenge-template.md`.
-- Align challenge output expectations in `docs/challenges/04-execute.md` with
-  `docs/audiences/facilitator/scoring-rubric.md`.
-- Normalize a challenge timeline in `docs/challenges/README.md` while keeping sequence and points intact.
+- Align challenge output expectations in `site/src/content/docs/challenges/challenge-4-execute.md` with
+  `facilitator/scoring-rubric.md`.
+- Normalize a challenge timeline in `site/src/content/docs/challenges/index.md` while keeping sequence and points intact.

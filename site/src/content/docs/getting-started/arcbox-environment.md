@@ -18,7 +18,7 @@ Your team has access to an [Azure Jumpstart ArcBox for IT Pros](https://jumpstar
 
 ### Architecture Diagram
 
-![ArcBox for IT Pros architecture](/images/arch_itpro.png)
+![ArcBox for IT Pros architecture](../../../assets/images/arch_itpro.png)
 
 *Source: [Azure Arc Jumpstart — ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro)*
 

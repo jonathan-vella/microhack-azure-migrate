@@ -3,14 +3,14 @@ name: docs-writer
 description: Maintains workshop documentation accuracy, consistency, and freshness.
 ---
 
-# Workshop Docs Maintainer Skill
+# MicroHack Docs Maintainer Skill
 
 ## Scope
 
 - Root docs: `README.md`, `AGENDA.md`, `feedback-form.md`
-- Challenges: `docs/challenges/`
-- Facilitator materials: `docs/audiences/facilitator/`
-- Participant materials: `docs/audiences/participant/`
+- Challenges: `site/src/content/docs/challenges/`
+- Facilitator materials: `facilitator/`
+- Participant materials: `site/src/content/docs/`
 - Script docs: `scripts/README.md`
 
 ## Core Checks

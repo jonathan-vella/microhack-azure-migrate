@@ -1,6 +1,6 @@
-/* Custom styles for Azure Migration Workshop */
+/* Custom styles for Azure Migration MicroHack */
 
 /* Footer */
 .site-title::after {
-	content: '';
+  content: "";
 }

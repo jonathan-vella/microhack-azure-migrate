@@ -1,0 +1,31 @@
+---
+import StarlightFooter from '@astrojs/starlight/components/Footer.astro';
+---
+
+<StarlightFooter {...Astro.props}><slot /></StarlightFooter>
+
+<script>
+  import mermaid from 'mermaid';
+
+  const theme = document.documentElement.dataset.theme === 'light' ? 'default' : 'dark';
+  mermaid.initialize({ startOnLoad: true, theme });
+
+  const observer = new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      if (m.attributeName === 'data-theme') {
+        const next = document.documentElement.dataset.theme === 'light' ? 'default' : 'dark';
+        mermaid.initialize({ startOnLoad: false, theme: next });
+        document.querySelectorAll('.mermaid[data-processed]').forEach((el) => {
+          el.removeAttribute('data-processed');
+          el.innerHTML = el.getAttribute('data-original') || el.textContent || '';
+        });
+        mermaid.run();
+      }
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+  document.querySelectorAll('.mermaid').forEach((el) => {
+    el.setAttribute('data-original', el.textContent || '');
+  });
+</script>

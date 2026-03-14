@@ -1,6 +1,6 @@
 # Facilitator Guide
 
-Comprehensive coaching guide for the Azure Migration Workshop.
+Comprehensive coaching guide for the Azure Migration MicroHack.
 
 ---
 
@@ -16,7 +16,7 @@ As a facilitator, you are a **coach**, not a lecturer. Your job is to:
 
 ---
 
-## Workshop Overview
+## MicroHack Overview
 
 | Metric | Value |
 |--------|-------|
@@ -378,7 +378,7 @@ Use these when teams are stuck:
 
 ---
 
-## Post-Workshop
+## Post-MicroHack
 
 1. Ensure all cleanup scripts run
 2. Collect and review feedback forms
@@ -390,6 +390,6 @@ Use these when teams are stuck:
 
 ## Thank You
 
-Thank you for facilitating this workshop. Your guidance helps IT professionals build real-world Azure migration skills.
+Thank you for facilitating this MicroHack. Your guidance helps IT professionals build real-world Azure migration skills.
 
-Questions? Contact the workshop developer.
+Questions? Contact the MicroHack developer.

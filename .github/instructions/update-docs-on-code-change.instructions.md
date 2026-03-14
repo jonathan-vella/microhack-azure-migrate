@@ -17,6 +17,6 @@ When changing code or scripts, update docs if any of the following are affected:
 
 - `README.md`
 - `AGENDA.md`
-- `docs/challenges/` files related to the changed behavior
-- `docs/audiences/facilitator/` and `docs/audiences/participant/` files impacted by the change
+- `site/src/content/docs/challenges/` files related to the changed behavior
+- `facilitator/` files impacted by the change
 - `scripts/README.md`

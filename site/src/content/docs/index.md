@@ -1,17 +1,17 @@
 ---
-title: Azure Migration Workshop
-description: "1-day hands-on workshop: Discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework"
+title: Azure Migration MicroHack
+description: "1-day hands-on MicroHack: Discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework"
 template: splash
 hero:
   tagline: Hands-on labs and whiteboard design sessions — discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework.
   actions:
     - text: Get Started
-      link: /getting-started/
+      link: getting-started/
       icon: right-arrow
 ---
 
 :::tip
-**What is this workshop?** A 1-day team-based event combining Azure Migrate
+**What is this MicroHack?** A 1-day team-based event combining Azure Migrate
 appliance labs with whiteboard design sessions, aligned to the
 [Cloud Adoption Framework Migrate methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/).
 :::
@@ -21,7 +21,7 @@ appliance labs with whiteboard design sessions, aligned to the
 ```mermaid
 %%{init: {'theme':'neutral'}}%%
 gantt
-  title Workshop Day (10:00 – 17:00)
+  title MicroHack Day (10:00 – 17:00)
   dateFormat HH:mm
   axisFormat %H:%M
   section Morning
@@ -67,7 +67,7 @@ gantt
 
 ## Learning Objectives
 
-By the end of this workshop, you will:
+By the end of this MicroHack, you will:
 
 1. **Discover** on-premises workloads using Azure Migrate appliance
 2. **Assess** migration readiness for VMs and SQL databases
@@ -93,21 +93,21 @@ migration strategy, and present a complete plan — all within a single day.
 | Challenge 6 | — | Optimise (CAF) |
 | Challenge 7 | 5 | Present & Synthesise |
 
-## Explore the Workshop
+## Explore the MicroHack
 
 ### Quick Entry Points
 
 | I need to... | Go to |
 |---|---|
-| **Check if I'm ready** | [Setup & Pre-work](/getting-started/setup/) |
-| **Read the scenario** | [Workshop Prep](/getting-started/workshop-prep/) |
-| **Start the challenges** | [Challenge 1](/challenges/challenge-1-plan/) |
-| **Fix something broken** | [Troubleshooting](/reference/troubleshooting/) |
+| **Check if I'm ready** | [Setup & Pre-work](getting-started/setup/) |
+| **Read the scenario** | [Workshop Prep](getting-started/workshop-prep/) |
+| **Start the challenges** | [Challenge 1](challenges/challenge-1-plan/) |
+| **Fix something broken** | [Troubleshooting](reference/troubleshooting/) |
 
-### Workshop Sections
+### MicroHack Sections
 
-- **[Getting Started](/getting-started/)** — Set up your environment, check prerequisites, and learn the scenario
-- **[Challenges](/challenges/)** — 7 challenges — from planning through to final presentations
-- **[Guides](/guides/)** — Hints & tips and a printable quick-reference card
-- **[Reference](/reference/)** — Glossary, troubleshooting, and governance scripts
-- **[About](/about/)** — Agenda, event details, and feedback
+- **[Getting Started](getting-started/)** — Set up your environment, check prerequisites, and learn the scenario
+- **[Challenges](challenges/)** — 7 challenges — from planning through to final presentations
+- **[Guides](guides/)** — Hints & tips and a printable quick-reference card
+- **[Reference](reference/)** — Glossary, troubleshooting, and governance scripts
+- **[About](about/)** — Agenda, event details, and feedback

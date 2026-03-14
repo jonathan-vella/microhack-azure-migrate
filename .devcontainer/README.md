@@ -1,4 +1,4 @@
-# DevContainer — Azure Migration Workshop
+# DevContainer — Azure Migration MicroHack
 
 This devcontainer provides the complete environment for both running the
 workshop and building the documentation site.

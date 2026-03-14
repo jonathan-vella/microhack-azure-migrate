@@ -16,9 +16,9 @@ Supported tasks:
 - `README.md`
 - `AGENDA.md`
 - `.github/skills/challenge-guide-styler/references/challenge-template.md`
-- `docs/challenges/README.md`
-- `docs/audiences/participant/README.md`
-- `docs/audiences/facilitator/scoring-rubric.md`
+- `site/src/content/docs/challenges/index.md`
+- `site/src/content/docs/`
+- `facilitator/scoring-rubric.md`
 - `scripts/README.md`
 
 ## Non-Goals and Constraints

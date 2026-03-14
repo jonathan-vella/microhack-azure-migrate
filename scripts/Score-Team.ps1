@@ -68,7 +68,7 @@ if (Test-Path $ScoreFile) {
 else {
     $scores = @{
         "metadata" = @{
-            "workshop" = "Azure Migration Workshop"
+            "workshop" = "Azure Migration MicroHack"
             "created" = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
         }
         "teams" = @{}

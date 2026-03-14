@@ -1,4 +1,4 @@
-# Azure Migration Workshop - Target Architecture
+# Azure Migration MicroHack - Target Architecture
 
 This diagram shows the recommended Azure target architecture after migrating the ArcBox on-premises workloads.
 

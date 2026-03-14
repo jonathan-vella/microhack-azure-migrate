@@ -297,9 +297,9 @@ After all presentations:
 
 ## Next Step
 
-### Workshop Complete! 🎉
+### MicroHack Complete! 🎉
 
-Congratulations on completing the Azure Migration Workshop!
+Congratulations on completing the Azure Migration MicroHack!
 
 ### Next Steps
 

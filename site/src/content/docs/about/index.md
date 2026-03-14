@@ -8,4 +8,4 @@ sidebar:
 
 # About
 
-Agenda, event details, and feedback for the Azure Migration Workshop.
+Agenda, event details, and feedback for the Azure Migration MicroHack.

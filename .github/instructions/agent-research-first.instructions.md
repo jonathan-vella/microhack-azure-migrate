@@ -5,13 +5,13 @@ applyTo: "*"
 
 # Agent Research Requirements
 
-All agents must research this workshop repo before implementation.
+All agents must research this MicroHack repo before implementation.
 
 ## Required Checklist
 
-- Confirm workshop intent in `README.md` and `AGENDA.md`.
-- Confirm audience split in `docs/audiences/participant/` and `docs/audiences/facilitator/`.
-- Confirm challenge flow and dependencies in `docs/challenges/`.
+- Confirm MicroHack intent in `README.md` and `AGENDA.md`.
+- Confirm audience split in `site/src/content/docs/` (participant) and `facilitator/` (facilitator).
+- Confirm challenge flow and dependencies in `site/src/content/docs/challenges/`.
 - Confirm script impact in `scripts/` before changing automation.
 - Confirm all referenced links and paths exist.
 

@@ -1,5 +1,5 @@
 {
-  "name": "Azure Migration Workshop",
+  "name": "Azure Migration MicroHack",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/azure-cli:1": {
@@ -19,9 +19,7 @@
   "remoteEnv": {
     "GH_TOKEN": "${localEnv:GH_TOKEN}"
   },
-  "forwardPorts": [
-    4321
-  ],
+  "forwardPorts": [4321],
   "postCreateCommand": "npm install && cd site && npm install",
   "customizations": {
     "vscode": {
@@ -36,13 +34,17 @@
         "redhat.vscode-yaml",
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
-        "astro-build.astro-vscode"
+        "astro-build.astro-vscode",
+        "unifiedjs.vscode-mdx"
       ],
       "settings": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "[markdown]": {
           "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+        },
+        "[astro]": {
+          "editor.defaultFormatter": "astro-build.astro-vscode"
         }
       }
     }

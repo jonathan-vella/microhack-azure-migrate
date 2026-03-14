@@ -37,11 +37,11 @@ review **every** file in this repository, fix issues directly, and produce a cha
 ### 2. Proofreader
 
 - Verify all internal links resolve to actual files in the repo.
-- Confirm timing, points, and challenge sequence are consistent across `README.md`, `docs/about/agenda.md`, `docs/challenges/index.md`, and `facilitator/scoring-rubric.md`.
+- Confirm timing, points, and challenge sequence are consistent across `README.md`, `site/src/content/docs/about/agenda.md`, `site/src/content/docs/challenges/index.md`, and `facilitator/scoring-rubric.md`.
 - Check heading hierarchy (no skipped levels).
 - Validate Mermaid diagram syntax where present.
 - Ensure YAML frontmatter is well-formed on every markdown file.
-- Confirm no facilitator-only content leaks into participant-facing docs under `docs/`.
+- Confirm no facilitator-only content leaks into participant-facing docs under `site/src/content/docs/`.
 
 ### 3. Hackathon Coach
 
@@ -54,12 +54,12 @@ review **every** file in this repository, fix issues directly, and produce a cha
 
 ### 4. UI & UX Designer
 
-- Review Jekyll site structure: navigation order, parent/child relationships, section grouping in `_config.yml` and frontmatter `nav_order` values.
-- Evaluate callout usage (`{: .warning}`, `{: .note}`, `{: .important}`, `{: .tip}`) for consistency and effectiveness.
+- Review Astro Starlight site structure: sidebar configuration in `site/astro.config.mjs`, frontmatter ordering, and section grouping.
+- Evaluate callout usage (Starlight `:::tip`, `:::note`, `:::caution`, `:::danger`) for consistency and effectiveness.
 - Check that pages have scannable structure: short paragraphs, bullet lists for steps, tables for reference data.
 - Verify the challenge snapshot table appears at the top of every challenge guide.
 - Ensure mobile-friendly formatting: no overly wide tables, no long unbroken lines.
-- Review custom SCSS in `docs/_sass/custom/custom.scss` for accessibility (contrast, font sizing).
+- Review custom CSS in `site/src/styles/custom.css` for accessibility (contrast, font sizing).
 
 ## Microsoft Learn Verification
 
@@ -86,7 +86,7 @@ They catch:
 - Vague success criteria ("demonstrate understanding" — how?).
 - Timing that doesn't add up across documents.
 - Orphaned links or unreferenced files.
-- Jargon without definition (check against `docs/reference/glossary.md`).
+- Jargon without definition (check against `site/src/content/docs/reference/glossary.md`).
 - Any sentence over 30 words.
 
 Produce a structured findings table:
@@ -118,14 +118,14 @@ After generating both review tables, **interpret every recommendation and apply 
 Review these paths in order:
 
 1. `README.md`
-2. `docs/index.md`, `docs/about/agenda.md`, `docs/about/feedback.md`, `docs/about/invitation.md`
-3. `docs/getting-started/` (all files)
-4. `docs/challenges/` (all files, in challenge order 0–7, plus `index.md`)
-5. `docs/guides/` (all files)
-6. `docs/reference/` (all files)
-7. `facilitator/` (all files — review fully but never copy content into `docs/`)
+2. `site/src/content/docs/index.md`, `site/src/content/docs/about/agenda.md`, `site/src/content/docs/about/feedback.md`, `site/src/content/docs/about/invitation.md`
+3. `site/src/content/docs/getting-started/` (all files)
+4. `site/src/content/docs/challenges/` (all files, in challenge order 0–7, plus `index.md`)
+5. `site/src/content/docs/guides/` (all files)
+6. `site/src/content/docs/reference/` (all files)
+7. `facilitator/` (all files — review fully but never copy content into `site/src/content/docs/`)
 8. `scripts/` (README and inline help/comments only)
-9. `docs/_config.yml`, `docs/_includes/`, `docs/_sass/`
+9. `site/astro.config.mjs`, `site/src/styles/custom.css`
 
 ## Constraints
 
