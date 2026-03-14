@@ -18,21 +18,24 @@ banner:
 
 ## What You'll Do
 
-:::tip[Discover]
-Deploy the Azure Migrate appliance and discover on-premises VMs and SQL databases running in ArcBox.
-:::
-
-:::tip[Assess]
-Evaluate migration readiness, analyse dependencies, and generate Azure suitability assessments.
-:::
-
-:::tip[Design]
-Plan migration waves, map dependencies, and align your strategy to the Cloud Adoption Framework.
-:::
-
-:::caution[Adapt]
-Respond to a mid-event curveball — new compliance requirements that change your plan.
-:::
+<div class="feature-grid">
+<div class="feature">
+<strong>🔍 Discover</strong>
+<p>Deploy the Azure Migrate appliance and discover on-premises VMs and SQL databases running in ArcBox.</p>
+</div>
+<div class="feature">
+<strong>📋 Assess</strong>
+<p>Evaluate migration readiness, analyse dependencies, and generate Azure suitability assessments.</p>
+</div>
+<div class="feature">
+<strong>🧩 Design</strong>
+<p>Plan migration waves, map dependencies, and align your strategy to the Cloud Adoption Framework.</p>
+</div>
+<div class="feature">
+<strong>⚡ Adapt</strong>
+<p>Respond to a mid-event curveball — new compliance requirements that change your plan.</p>
+</div>
+</div>
 
 ## Schedule Overview
 
@@ -57,7 +60,8 @@ gantt
       Wrap-up                   :16:45, 15m
 ```
 
-:::note[Text alternative: Schedule overview]
+<details>
+<summary>Text alternative: Schedule overview</summary>
 
 **Morning**: Welcome & Azure 101 (10:00–10:30) → C1 Plan & Design
 (10:30–11:15) → C2 Deploy Appliance (11:15–12:30) → Lunch
@@ -68,7 +72,7 @@ gantt
 
 **Presentations**: C7 Presentations (16:00–16:45) → Wrap-up (16:45–17:00)
 
-:::
+</details>
 
 ## Key Facts
 

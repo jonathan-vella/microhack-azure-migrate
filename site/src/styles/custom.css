@@ -119,21 +119,66 @@ tr:last-child td {
   border-left-width: 3px;
 }
 
-/* Feature cards layout on splash page */
-[data-has-hero] .starlight-aside + .starlight-aside {
-  margin-top: 0.5rem;
+/* Feature grid on splash page */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-block: 1.5rem;
 }
 
-@media (min-width: 50rem) {
-  [data-has-hero]
-    .sl-markdown-content
-    > .starlight-aside:has(+ .starlight-aside),
-  [data-has-hero] .sl-markdown-content > .starlight-aside + .starlight-aside {
-    display: inline-block;
-    width: calc(50% - 0.5rem);
-    vertical-align: top;
-    margin-top: 0.5rem;
+@media (min-width: 40rem) {
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+.feature {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--sl-color-gray-6);
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.feature:hover {
+  border-color: var(--sl-color-accent);
+  transform: translateY(-2px);
+}
+
+.feature strong {
+  display: block;
+  font-size: var(--sl-text-base);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  margin: 0;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-2);
+}
+
+/* Collapsible text alternative */
+details {
+  margin-block: 0.5rem;
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+}
+
+details summary {
+  cursor: pointer;
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+}
+
+details summary:hover {
+  color: var(--sl-color-gray-1);
+}
+
+details[open] {
+  padding-block-end: 0.5rem;
 }
 
 /* Smooth link transitions */
