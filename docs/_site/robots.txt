@@ -1,1 +1,0 @@
-Sitemap: https://jonathan-vella.github.io/microhack-azure-migrate/sitemap.xml
