@@ -12,30 +12,30 @@ hero:
       link: challenges/
       icon: open-book
       variant: minimal
-banner:
-  content: "7 challenges &middot; 100 points &middot; 1 day &middot; Who will top the leaderboard?"
 ---
+
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
 
 ## What You'll Do
 
-<div class="feature-grid">
-<div class="feature">
-<strong>🔍 Discover</strong>
-<p>Deploy the Azure Migrate appliance and discover on-premises VMs and SQL databases running in ArcBox.</p>
-</div>
-<div class="feature">
-<strong>📋 Assess</strong>
-<p>Evaluate migration readiness, analyse dependencies, and generate Azure suitability assessments.</p>
-</div>
-<div class="feature">
-<strong>🧩 Design</strong>
-<p>Plan migration waves, map dependencies, and align your strategy to the Cloud Adoption Framework.</p>
-</div>
-<div class="feature">
-<strong>⚡ Adapt</strong>
-<p>Respond to a mid-event curveball — new compliance requirements that change your plan.</p>
-</div>
-</div>
+<CardGrid stagger>
+  <Card title="Discover" icon="magnifier">
+    Deploy the Azure Migrate appliance and discover on-premises VMs and SQL
+    databases running in ArcBox.
+  </Card>
+  <Card title="Assess" icon="list-format">
+    Evaluate migration readiness, analyse dependencies, and generate Azure
+    suitability assessments.
+  </Card>
+  <Card title="Design" icon="puzzle">
+    Plan migration waves, map dependencies, and align your strategy to the Cloud
+    Adoption Framework.
+  </Card>
+  <Card title="Adapt" icon="warning">
+    Respond to a mid-event curveball — new compliance requirements that change
+    your plan.
+  </Card>
+</CardGrid>
 
 ## Schedule Overview
 
@@ -76,13 +76,13 @@ gantt
 
 ## Key Facts
 
-| Aspect | Details |
-|---|---|
-| **Duration** | 1 day (7 hours: 10:00–17:00) |
-| **Challenges** | 7 challenges + pre-work across the full migration lifecycle |
-| **Scoring** | 100 base points + up to 15 bonus points |
-| **Teams** | 4 members per team (self-organising) |
-| **Format** | Hands-on labs + whiteboard design sessions |
+| Aspect              | Details                                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
+| **Duration**        | 1 day (7 hours: 10:00–17:00)                                                                   |
+| **Challenges**      | 7 challenges + pre-work across the full migration lifecycle                                    |
+| **Scoring**         | 100 base points + up to 15 bonus points                                                        |
+| **Teams**           | 4 members per team (self-organising)                                                           |
+| **Format**          | Hands-on labs + whiteboard design sessions                                                     |
 | **Lab Environment** | [Azure Jumpstart ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro) |
 
 ## The Scenario: Contoso Bakery
@@ -95,21 +95,37 @@ compliance along the way.
 Your team will assess Contoso's 5-server estate running in ArcBox, design a
 migration strategy, and present a complete plan — all within a single day.
 
-| Phase | Points | Focus |
-|---|---|---|
-| Challenges 1–2 | 50 | Plan & Prepare (CAF) |
-| Challenges 3–5 | 45 | Execute & Adapt (CAF) |
-| Challenge 6 | — | Optimise (CAF) |
-| Challenge 7 | 5 | Present & Synthesise |
+| Phase          | Points | Focus                 |
+| -------------- | ------ | --------------------- |
+| Challenges 1–2 | 50     | Plan & Prepare (CAF)  |
+| Challenges 3–5 | 45     | Execute & Adapt (CAF) |
+| Challenge 6    | —      | Optimise (CAF)        |
+| Challenge 7    | 5      | Present & Synthesise  |
 
 ## Quick Entry Points
 
-| I need to... | Go to |
-|---|---|
-| **Check if I'm ready** | [Setup & Pre-work](getting-started/setup/) |
-| **Read the scenario** | [Workshop Prep](getting-started/workshop-prep/) |
-| **Start the challenges** | [Challenge 1: Plan](challenges/challenge-1-plan/) |
-| **Fix something broken** | [Troubleshooting](reference/troubleshooting/) |
+<CardGrid>
+  <LinkCard
+    title="Check if I'm ready"
+    description="Verify Azure access and prerequisites."
+    href="getting-started/setup/"
+  />
+  <LinkCard
+    title="Read the scenario"
+    description="Understand the Contoso Bakery story."
+    href="getting-started/workshop-prep/"
+  />
+  <LinkCard
+    title="Start the challenges"
+    description="Begin with Challenge 1: Plan."
+    href="challenges/challenge-1-plan/"
+  />
+  <LinkCard
+    title="Fix something broken"
+    description="Common issues and solutions."
+    href="reference/troubleshooting/"
+  />
+</CardGrid>
 
 ## MicroHack Sections
 
