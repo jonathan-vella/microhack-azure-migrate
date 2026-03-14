@@ -1,0 +1,924 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/microhack-azure-migrate/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/microhack-azure-migrate/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(5)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(5) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(5) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(5) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/microhack-azure-migrate/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/microhack-azure-migrate/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Challenge 4: Execute | Azure Migration Workshop</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Challenge 4: Execute" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Design migration execution strategy with tool selection and rollback" />
+<meta property="og:description" content="Design migration execution strategy with tool selection and rollback" />
+<link rel="canonical" href="https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-4-execute/" />
+<meta property="og:url" content="https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-4-execute/" />
+<meta property="og:site_name" content="Azure Migration Workshop" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Challenge 4: Execute" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Design migration execution strategy with tool selection and rollback","headline":"Challenge 4: Execute","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jonathan-vella.github.io/microhack-azure-migrate/assets/images/logo.svg"}},"url":"https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-4-execute/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- Additional head elements for Azure Migration Workshop -->
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/microhack-azure-migrate/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="Azure Migration Workshop"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/" class="nav-list-link">Home</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Getting Started submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/getting-started/" class="nav-list-link">Getting Started</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/setup/" class="nav-list-link">Setup & Pre-work</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/workshop-prep/" class="nav-list-link">Workshop Prep</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/arcbox-environment/" class="nav-list-link">ArcBox Environment</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Challenges submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/challenges/" class="nav-list-link">Challenges</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-0-azure-101/" class="nav-list-link">Challenge 0: Azure 101</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-1-plan/" class="nav-list-link">Challenge 1: Plan</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-2-appliance/" class="nav-list-link">Challenge 2: Deploy Appliance</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-3-assessment/" class="nav-list-link">Challenge 3: Assessment</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-4-execute/" class="nav-list-link">Challenge 4: Execute</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-5-curveball/" class="nav-list-link">Challenge 5: Curveball</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-6-optimize/" class="nav-list-link">Challenge 6: Optimise</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-7-presentation/" class="nav-list-link">Challenge 7: Presentation</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Guides submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/guides/" class="nav-list-link">Guides</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/guides/hints-and-tips/" class="nav-list-link">Hints & Tips</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/guides/quick-reference-card/" class="nav-list-link">Quick Reference Card</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Reference submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/reference/" class="nav-list-link">Reference</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/glossary/" class="nav-list-link">Glossary</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/troubleshooting/" class="nav-list-link">Troubleshooting</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/governance-scripts/" class="nav-list-link">Governance Scripts</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="About submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/about/" class="nav-list-link">About</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/about/agenda/" class="nav-list-link">Agenda</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/about/feedback/" class="nav-list-link">Feedback</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/about/invitation/" class="nav-list-link">Invitation</a></li></ul></li></ul>
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Azure Migration Workshop" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Azure Migration Workshop</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/jonathan-vella/microhack-azure-migrate" class="site-button"
+          
+          target="_blank" rel="noopener noreferrer"
+          
+        >
+          GitHub Repo
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/microhack-azure-migrate/challenges/">Challenges</a></li>
+    <li class="breadcrumb-nav-list-item"><span>Challenge 4: Execute</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="challenge-4-execute">
+  
+  
+    <a href="#challenge-4-execute" class="anchor-heading" aria-labelledby="challenge-4-execute"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Challenge 4: Execute
+  
+  
+</h1>
+    
+<h2 id="challenge-snapshot">
+  
+  
+    <a href="#challenge-snapshot" class="anchor-heading" aria-labelledby="challenge-snapshot"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Challenge Snapshot
+  
+  
+</h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Duration</td>
+      <td>30 minutes</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>Whiteboard Design Session</td>
+    </tr>
+    <tr>
+      <td>Points</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Deliverable</td>
+      <td>Migration runbook outline with sequencing and rollback strategy</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="objective">
+  
+  
+    <a href="#objective" class="anchor-heading" aria-labelledby="objective"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objective
+  
+  
+</h2>
+    
+
+<p>Design a detailed migration execution strategy including tool selection, sequencing, and rollback planning based on your assessment findings.</p><hr />
+<h2 id="the-business-challenge">
+  
+  
+    <a href="#the-business-challenge" class="anchor-heading" aria-labelledby="the-business-challenge"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> The Business Challenge
+  
+  
+</h2>
+    
+
+<p>Contoso’s CTO has reviewed your assessment results and wants to proceed. Now they need:</p>
+
+<ol>
+  <li><strong>Tool recommendations</strong> — What Azure services migrate each workload?</li>
+  <li><strong>Migration sequence</strong> — Detailed order with timeline</li>
+  <li><strong>Rollback strategy</strong> — What if something goes wrong?</li>
+</ol>
+
+<p>The board meets next week — your migration runbook needs to be solid!</p><hr />
+<h2 id="prerequisites">
+  
+  
+    <a href="#prerequisites" class="anchor-heading" aria-labelledby="prerequisites"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prerequisites
+  
+  
+</h2>
+    
+
+<p>Before starting this challenge, ensure:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Challenge 3 completed — assessment results available</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Your team has the assessment export or documented findings</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />You have a whiteboard or flip chart ready</li>
+</ul><hr />
+<h2 id="your-tasks">
+  
+  
+    <a href="#your-tasks" class="anchor-heading" aria-labelledby="your-tasks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Your Tasks
+  
+  
+</h2>
+    
+<h3 id="part-a-tool-selection-15-min">
+  
+  
+    <a href="#part-a-tool-selection-15-min" class="anchor-heading" aria-labelledby="part-a-tool-selection-15-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Part A: Tool Selection (15 min)
+  
+  
+</h3>
+    
+
+<p>For each workload type, select the appropriate Azure migration tool:</p>
+<h4 id="available-migration-tools">
+  
+  
+    <a href="#available-migration-tools" class="anchor-heading" aria-labelledby="available-migration-tools"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Available Migration Tools
+  
+  
+</h4>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Best For</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Azure Migrate: Server Migration</strong></td>
+      <td>IaaS VMs</td>
+      <td>Agentless or agent-based</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Site Recovery (ASR)</strong></td>
+      <td>Disaster recovery + migration</td>
+      <td>Continuous replication</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Database Migration Service (DMS)</strong></td>
+      <td>Databases</td>
+      <td>Online or offline modes</td>
+    </tr>
+    <tr>
+      <td><strong>Azure SQL Migration extension</strong></td>
+      <td>SQL to Azure SQL</td>
+      <td>Built into Azure Migrate</td>
+    </tr>
+    <tr>
+      <td><strong>Data Box</strong></td>
+      <td>Large data transfers</td>
+      <td>Offline, physical device</td>
+    </tr>
+    <tr>
+      <td><strong>AzCopy / Storage Migration</strong></td>
+      <td>File servers</td>
+      <td>SMB to Azure Files</td>
+    </tr>
+  </tbody>
+</table></div>
+<h4 id="design-exercise">
+  
+  
+    <a href="#design-exercise" class="anchor-heading" aria-labelledby="design-exercise"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Design Exercise
+  
+  
+</h4>
+    
+
+<p>For each server, document your tool choice:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Workload Type</th>
+      <th>Migration Tool</th>
+      <th>Migration Type</th>
+      <th>Justification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ArcBox-Win2K22</td>
+      <td>App Server</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ArcBox-Win2K25</td>
+      <td>File Server</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ArcBox-SQL</td>
+      <td>SQL Database</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ArcBox-Ubuntu-01</td>
+      <td>Web Server</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>ArcBox-Ubuntu-02</td>
+      <td>Monitoring</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Guiding Questions</strong>:</p>
+
+<ul>
+  <li>Does the workload need near-zero downtime or is maintenance window OK?</li>
+  <li>Any data residency requirements affecting tool choice?</li>
+  <li>What’s the simplest path for each workload?</li>
+</ul>
+
+<p><strong>Deliverable</strong>: Whiteboard table showing tool assignments</p><hr />
+<h3 id="part-b-migration-sequencing-15-min">
+  
+  
+    <a href="#part-b-migration-sequencing-15-min" class="anchor-heading" aria-labelledby="part-b-migration-sequencing-15-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Part B: Migration Sequencing (15 min)
+  
+  
+</h3>
+    
+
+<p>Design the detailed migration sequence considering:</p>
+
+<ol>
+  <li><strong>Dependencies</strong> — What must migrate together?</li>
+  <li><strong>Risk profile</strong> — Start with lower-risk workloads</li>
+  <li><strong>Validation time</strong> — Allow testing between waves</li>
+</ol>
+<h4 id="migration-wave-template">
+  
+  
+    <a href="#migration-wave-template" class="anchor-heading" aria-labelledby="migration-wave-template"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Migration Wave Template
+  
+  
+</h4>
+    
+
+<pre><code class="language-mermaid">gantt
+    title Migration Wave Plan
+   dateFormat YYYY-MM-DD
+
+    section Wave 1
+    Prep &amp; Validation      :prep1, 2024-01-15, 2d
+   Migrate Server A       :migrate1, after prep1, 1d
+    Testing &amp; Validation   :test1, after migrate1, 2d
+
+    section Wave 2
+    Prep &amp; Dependencies    :prep2, after test1, 1d
+   Migrate Server B,C     :migrate2, after prep2, 2d
+    Testing &amp; Validation   :test2, after migrate2, 2d
+
+    section Wave 3
+    Final Prep             :prep3, after test2, 1d
+   Migrate SQL/App        :crit, migrate3, after prep3, 2d
+    UAT &amp; Go-Live          :test3, after migrate3, 3d
+</code></pre>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Wave</th>
+      <th>Name</th>
+      <th>Servers</th>
+      <th>Duration</th>
+      <th>Downtime</th>
+      <th>Go/No-Go Criteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><em>[Fill in]</em></td>
+      <td><em>[List servers]</em></td>
+      <td><em>X days</em></td>
+      <td><em>X hours</em></td>
+      <td><em>[Criteria]</em></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><em>[Fill in]</em></td>
+      <td><em>[List servers]</em></td>
+      <td><em>X days</em></td>
+      <td><em>X hours</em></td>
+      <td><em>[Criteria]</em></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><em>[Fill in]</em></td>
+      <td><em>[List servers]</em></td>
+      <td><em>X days</em></td>
+      <td><em>X hours</em></td>
+      <td><em>[Criteria]</em></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Guiding Questions</strong>:</p>
+
+<ul>
+  <li>Which workload should go first (lowest risk, good learning)?</li>
+  <li>Should SQL migrate before or after the app servers?</li>
+  <li>How do you handle the customer-facing web server?</li>
+</ul>
+<h4 id="recommended-sequencing-pattern">
+  
+  
+    <a href="#recommended-sequencing-pattern" class="anchor-heading" aria-labelledby="recommended-sequencing-pattern"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Recommended Sequencing Pattern
+  
+  
+</h4>
+    
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────┐
+│                    MIGRATION TIMELINE                        │
+├─────────────────────────────────────────────────────────────┤
+│ Week 1    │ Week 2    │ Week 3    │ Week 4    │ Week 5     │
+│           │           │           │           │            │
+│ Wave 1:   │ Wave 2:   │ Wave 3:   │ Wave 4:   │ Cleanup &amp;  │
+│ Pilot     │ Non-Prod  │ Data Tier │ App Tier  │ Decommission│
+│ (Monitoring)│ (Dev/Test)│ (SQL)   │ (Web/App) │            │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<p><strong>Deliverable</strong>: Whiteboard showing migration waves with timeline</p><hr />
+<h3 id="part-c-rollback-strategy-15-min">
+  
+  
+    <a href="#part-c-rollback-strategy-15-min" class="anchor-heading" aria-labelledby="part-c-rollback-strategy-15-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Part C: Rollback Strategy (15 min)
+  
+  
+</h3>
+    
+
+<p>Every migration needs a fallback plan. Design yours:</p>
+<h4 id="rollback-triggers">
+  
+  
+    <a href="#rollback-triggers" class="anchor-heading" aria-labelledby="rollback-triggers"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Rollback Triggers
+  
+  
+</h4>
+    
+
+<p>Define what constitutes a failed migration requiring rollback:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Trigger</th>
+      <th>Threshold</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Application errors</td>
+      <td>&gt; X% error rate</td>
+      <td>Rollback</td>
+    </tr>
+    <tr>
+      <td>Performance degradation</td>
+      <td>&gt; X% slower</td>
+      <td>Investigate, possible rollback</td>
+    </tr>
+    <tr>
+      <td>Data integrity issues</td>
+      <td>Any data loss</td>
+      <td>Immediate rollback</td>
+    </tr>
+    <tr>
+      <td>User complaints</td>
+      <td>&gt; X tickets/hour</td>
+      <td>Investigate</td>
+    </tr>
+    <tr>
+      <td>Recovery time exceeded</td>
+      <td>&gt; X hours to resolve</td>
+      <td>Rollback</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Guiding Questions</strong>:</p>
+
+<ul>
+  <li>How long will you keep the source environment running post-migration?</li>
+  <li>What’s the maximum acceptable rollback time (RTO)?</li>
+  <li>Who has authority to trigger a rollback?</li>
+</ul>
+<h4 id="rollback-procedures">
+  
+  
+    <a href="#rollback-procedures" class="anchor-heading" aria-labelledby="rollback-procedures"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Rollback Procedures
+  
+  
+</h4>
+    
+
+<p>For each wave, document:</p>
+
+<ol>
+  <li><strong>Rollback method</strong> — How to revert?</li>
+  <li><strong>Data sync</strong> — How to handle changes made in Azure?</li>
+  <li><strong>DNS/Network</strong> — How to redirect traffic?</li>
+  <li><strong>Timeline</strong> — How long until rollback is no longer possible?</li>
+</ol>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ROLLBACK PROCEDURE - WAVE 1
+├── Trigger: [who decides, based on what]
+├── Step 1: Stop application in Azure
+├── Step 2: Redirect DNS to on-prem
+├── Step 3: Verify on-prem services
+├── Step 4: Sync any data changes (if applicable)
+├── Step 5: Confirm rollback complete
+└── Post-mortem: Analyze failure, adjust plan
+</code></pre></div></div>
+
+<p><strong>Deliverable</strong>: Whiteboard showing rollback triggers and procedures</p><hr />
+<h2 id="expected-deliverables">
+  
+  
+    <a href="#expected-deliverables" class="anchor-heading" aria-labelledby="expected-deliverables"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Expected Deliverables
+  
+  
+</h2>
+    
+
+<p>By the end of this challenge, your whiteboard should show:</p>
+
+<ol>
+  <li>✅ <strong>Tool Selection Matrix</strong>
+    <ul>
+      <li>Each server mapped to migration tool</li>
+      <li>Justification for choices</li>
+    </ul>
+  </li>
+  <li>✅ <strong>Migration Wave Plan</strong>
+    <ul>
+      <li>4-5 waves with server assignments</li>
+      <li>Timeline estimate</li>
+      <li>Dependencies noted</li>
+    </ul>
+  </li>
+  <li>✅ <strong>Rollback Strategy</strong>
+    <ul>
+      <li>Trigger conditions</li>
+      <li>Rollback procedures per wave</li>
+      <li>Decision authority</li>
+    </ul>
+  </li>
+</ol>
+
+<p>📸 <strong>Take a photo of your whiteboard</strong> — You’ll need it for your presentation!</p><hr />
+<h2 id="success-criteria-15-points">
+  
+  
+    <a href="#success-criteria-15-points" class="anchor-heading" aria-labelledby="success-criteria-15-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Success Criteria (15 Points)
+  
+  
+</h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Points</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tool selection justified</td>
+      <td>5</td>
+      <td>Appropriate tool for each workload</td>
+    </tr>
+    <tr>
+      <td>Sequencing logical</td>
+      <td>5</td>
+      <td>Dependencies respected, risk managed</td>
+    </tr>
+    <tr>
+      <td>Rollback defined</td>
+      <td>5</td>
+      <td>Clear triggers and procedures</td>
+    </tr>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong>15</strong></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h2 id="-tip">
+  
+  
+    <a href="#-tip" class="anchor-heading" aria-labelledby="-tip"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 💡 Tip
+  
+  
+</h2>
+    
+
+<p>💡 <strong>Start simple</strong> — Monitoring server is a great pilot candidate</p>
+
+<p>💡 <strong>SQL is often the hardest</strong> — Plan extra time and testing</p>
+
+<p>💡 <strong>Parallel is faster, serial is safer</strong> — Find the right balance</p>
+
+<p>💡 <strong>Communication plan matters</strong> — Who knows when each wave happens?</p>
+
+<p>💡 <strong>Don’t forget DNS</strong> — Traffic routing is often the final cutover step</p><hr />
+<h3 id="reference-migration-types">
+  
+  
+    <a href="#reference-migration-types" class="anchor-heading" aria-labelledby="reference-migration-types"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Reference: Migration Types
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Downtime</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Lift and shift</strong></td>
+      <td>Move as-is to IaaS</td>
+      <td>Varies</td>
+      <td>Quick migration</td>
+    </tr>
+    <tr>
+      <td><strong>Replatform</strong></td>
+      <td>Minor changes (e.g., managed SQL)</td>
+      <td>Low</td>
+      <td>Database optimization</td>
+    </tr>
+    <tr>
+      <td><strong>Refactor</strong></td>
+      <td>Significant changes to code</td>
+      <td>None</td>
+      <td>Cloud-native benefits</td>
+    </tr>
+    <tr>
+      <td><strong>Retire</strong></td>
+      <td>Decommission instead of migrate</td>
+      <td>N/A</td>
+      <td>Obsolete systems</td>
+    </tr>
+    <tr>
+      <td><strong>Retain</strong></td>
+      <td>Keep on-premises</td>
+      <td>N/A</td>
+      <td>Compliance, not ready</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h3 id="reference-caf-migrate-execution-checklist">
+  
+  
+    <a href="#reference-caf-migrate-execution-checklist" class="anchor-heading" aria-labelledby="reference-caf-migrate-execution-checklist"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Reference: CAF Migrate Execution Checklist
+  
+  
+</h3>
+    
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Landing zone configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Network connectivity established</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identity/authentication ready</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Replication configured and healthy</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pre-migration testing complete</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Cutover window scheduled</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rollback plan documented and tested</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Support team briefed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Monitoring/alerting configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />User communication sent</li>
+</ul><hr />
+<h2 id="️-watch-out">
+  
+  
+    <a href="#️-watch-out" class="anchor-heading" aria-labelledby="️-watch-out"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ⚠️ Watch out
+  
+  
+</h2>
+    
+
+<ul>
+  <li>A strong plan without rollback detail increases execution risk.</li>
+  <li>Keep cutover communication and DNS steps explicit in your runbook.</li>
+</ul><hr />
+<h3 id="reflection-questions">
+  
+  
+    <a href="#reflection-questions" class="anchor-heading" aria-labelledby="reflection-questions"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Reflection Questions
+  
+  
+</h3>
+    
+
+<ul>
+  <li>How did your assessment results influence tool selection?</li>
+  <li>What dependencies created constraints in your sequencing?</li>
+  <li>Is your rollback plan realistic for your organization?</li>
+</ul><hr />
+<h2 id="next-step">
+  
+  
+    <a href="#next-step" class="anchor-heading" aria-labelledby="next-step"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Next Step
+  
+  
+</h2>
+    
+
+<p>⏸️ <strong>WAIT!</strong> Take a break (14:30–14:45).</p>
+
+<p>At 14:45, your facilitator will announce <strong>Challenge 5: Curveball</strong> — a surprise requirement that will test your adaptability!</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <p class="text-small mb-0">&copy; 2025–2026 Jonathan Vella. Distributed under the MIT License.</p>
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+    
+
+
+
+
+
+<script type="module">
+  
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.6.0/dist/mermaid.esm.min.mjs';
+  
+
+  var config = {}
+;
+  mermaid.initialize(config);
+  mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+
+
+  
+</body>
+</html>
+

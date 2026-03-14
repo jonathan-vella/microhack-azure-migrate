@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/microhack-azure-migrate/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/microhack-azure-migrate/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(1)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(1) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(3) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(3) > ul > li:nth-child(1) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(3) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/microhack-azure-migrate/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/microhack-azure-migrate/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Challenge 0: Azure 101 | Azure Migration Workshop</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Challenge 0: Azure 101" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Pre-work — foundational Azure skills before the workshop" />
+<meta property="og:description" content="Pre-work — foundational Azure skills before the workshop" />
+<link rel="canonical" href="https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-0-azure-101/" />
+<meta property="og:url" content="https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-0-azure-101/" />
+<meta property="og:site_name" content="Azure Migration Workshop" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Challenge 0: Azure 101" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Pre-work — foundational Azure skills before the workshop","headline":"Challenge 0: Azure 101","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jonathan-vella.github.io/microhack-azure-migrate/assets/images/logo.svg"}},"url":"https://jonathan-vella.github.io/microhack-azure-migrate/challenges/challenge-0-azure-101/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <!-- Additional head elements for Azure Migration Workshop -->
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/microhack-azure-migrate/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="Azure Migration Workshop"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/" class="nav-list-link">Home</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Getting Started submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/getting-started/" class="nav-list-link">Getting Started</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/setup/" class="nav-list-link">Setup & Pre-work</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/workshop-prep/" class="nav-list-link">Workshop Prep</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/getting-started/arcbox-environment/" class="nav-list-link">ArcBox Environment</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Challenges submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/challenges/" class="nav-list-link">Challenges</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-0-azure-101/" class="nav-list-link">Challenge 0: Azure 101</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-1-plan/" class="nav-list-link">Challenge 1: Plan</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-2-appliance/" class="nav-list-link">Challenge 2: Deploy Appliance</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-3-assessment/" class="nav-list-link">Challenge 3: Assessment</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-4-execute/" class="nav-list-link">Challenge 4: Execute</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-5-curveball/" class="nav-list-link">Challenge 5: Curveball</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-6-optimize/" class="nav-list-link">Challenge 6: Optimise</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/challenges/challenge-7-presentation/" class="nav-list-link">Challenge 7: Presentation</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Guides submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/guides/" class="nav-list-link">Guides</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/guides/hints-and-tips/" class="nav-list-link">Hints & Tips</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/guides/quick-reference-card/" class="nav-list-link">Quick Reference Card</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Reference submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/reference/" class="nav-list-link">Reference</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/glossary/" class="nav-list-link">Glossary</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/troubleshooting/" class="nav-list-link">Troubleshooting</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/reference/governance-scripts/" class="nav-list-link">Governance Scripts</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="About submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/microhack-azure-migrate/about/" class="nav-list-link">About</a><ul class="nav-list"><li class="nav-list-item"><a href="/microhack-azure-migrate/about/agenda/" class="nav-list-link">Agenda</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/about/feedback/" class="nav-list-link">Feedback</a></li><li class="nav-list-item"><a href="/microhack-azure-migrate/about/invitation/" class="nav-list-link">Invitation</a></li></ul></li></ul>
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Azure Migration Workshop" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Azure Migration Workshop</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/jonathan-vella/microhack-azure-migrate" class="site-button"
+          
+          target="_blank" rel="noopener noreferrer"
+          
+        >
+          GitHub Repo
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/microhack-azure-migrate/challenges/">Challenges</a></li>
+    <li class="breadcrumb-nav-list-item"><span>Challenge 0: Azure 101</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="pre-work-azure-101">
+  
+  
+    <a href="#pre-work-azure-101" class="anchor-heading" aria-labelledby="pre-work-azure-101"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pre-work: Azure 101
+  
+  
+</h1>
+    
+<h2 id="challenge-snapshot">
+  
+  
+    <a href="#challenge-snapshot" class="anchor-heading" aria-labelledby="challenge-snapshot"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Challenge Snapshot
+  
+  
+</h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Duration</td>
+      <td>30 minutes</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>Self-paced</td>
+    </tr>
+    <tr>
+      <td>Complete Before</td>
+      <td>Workshop Day</td>
+    </tr>
+    <tr>
+      <td>Deliverable</td>
+      <td>Completed pre-work checklist and readiness to start Challenge 1</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="objective">
+  
+  
+    <a href="#objective" class="anchor-heading" aria-labelledby="objective"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Objective
+  
+  
+</h2>
+    
+
+<p>Ensure all participants have foundational Azure skills before starting the migration challenges. Complete this pre-work <strong>before the workshop</strong> to ensure your team can hit the ground running.</p><hr />
+<h2 id="the-business-challenge">
+  
+  
+    <a href="#the-business-challenge" class="anchor-heading" aria-labelledby="the-business-challenge"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> The Business Challenge
+  
+  
+</h2>
+    
+
+<p>Your team has been given access to an Azure subscription for this workshop. Before the workshop day, you need to familiarize yourself with the Azure portal and key concepts.</p><hr />
+<h2 id="prerequisites">
+  
+  
+    <a href="#prerequisites" class="anchor-heading" aria-labelledby="prerequisites"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Prerequisites
+  
+  
+</h2>
+    
+
+<p>Before starting this challenge, ensure:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />You have Azure subscription credentials from your facilitator</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />You can sign in to the Azure portal</li>
+</ul><hr />
+<h2 id="your-tasks">
+  
+  
+    <a href="#your-tasks" class="anchor-heading" aria-labelledby="your-tasks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Your Tasks
+  
+  
+</h2>
+    
+<h3 id="task-1-navigate-the-azure-portal-10-min">
+  
+  
+    <a href="#task-1-navigate-the-azure-portal-10-min" class="anchor-heading" aria-labelledby="task-1-navigate-the-azure-portal-10-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 1: Navigate the Azure Portal (10 min)
+  
+  
+</h3>
+    
+
+<ol>
+  <li>Open the <a href="https://portal.azure.com">Azure Portal</a> in your browser</li>
+  <li>Sign in with the credentials provided by your facilitator</li>
+  <li>Explore the portal interface:
+    <ul>
+      <li><strong>Home</strong> — Your personalized dashboard</li>
+      <li><strong>All services</strong> — Complete service catalog</li>
+      <li><strong>Search bar</strong> — Quick navigation (try searching “migrate”)</li>
+      <li><strong>Cloud Shell</strong> — Built-in command line</li>
+    </ul>
+  </li>
+</ol>
+
+<p>✅ <strong>Verify</strong>: Can you find the following?</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Your subscription name</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />The resource groups in your subscription</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />The Azure Migrate service</li>
+</ul><hr />
+<h3 id="task-2-understand-subscriptions--resource-groups-10-min">
+  
+  
+    <a href="#task-2-understand-subscriptions--resource-groups-10-min" class="anchor-heading" aria-labelledby="task-2-understand-subscriptions--resource-groups-10-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 2: Understand Subscriptions &amp; Resource Groups (10 min)
+  
+  
+</h3>
+    
+
+<p><strong>Concepts to understand:</strong></p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+      <th>Analogy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tenant</strong></td>
+      <td>Your organization’s Microsoft Entra ID instance</td>
+      <td>Your company</td>
+    </tr>
+    <tr>
+      <td><strong>Subscription</strong></td>
+      <td>Billing container for Azure resources</td>
+      <td>A credit card account</td>
+    </tr>
+    <tr>
+      <td><strong>Resource Group</strong></td>
+      <td>Logical container for related resources</td>
+      <td>A folder for project files</td>
+    </tr>
+    <tr>
+      <td><strong>Resource</strong></td>
+      <td>Individual Azure service instance</td>
+      <td>A file</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Explore your subscription:</strong></p>
+
+<ol>
+  <li>Navigate to <strong>Subscriptions</strong> in the portal</li>
+  <li>Click on your workshop subscription</li>
+  <li>Review:
+    <ul>
+      <li>Subscription ID (you’ll need this later)</li>
+      <li>Current cost/usage</li>
+      <li>Resource providers</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Explore resource groups:</strong></p>
+
+<ol>
+  <li>Navigate to <strong>Resource Groups</strong></li>
+  <li>Find the pre-created ArcBox resource group</li>
+  <li>Click into it and explore the resources</li>
+</ol>
+
+<p>✅ <strong>Verify</strong>: Answer these questions:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />What is your subscription ID? (Write it down)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />What resource group contains your ArcBox environment?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />How many resources are in that resource group?</li>
+</ul><hr />
+<h3 id="task-3-understand-rbac-basics-5-min">
+  
+  
+    <a href="#task-3-understand-rbac-basics-5-min" class="anchor-heading" aria-labelledby="task-3-understand-rbac-basics-5-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 3: Understand RBAC Basics (5 min)
+  
+  
+</h3>
+    
+
+<p><strong>Role-Based Access Control (RBAC)</strong> determines what actions you can perform.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Permissions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Owner</strong></td>
+      <td>Full access, can assign roles</td>
+    </tr>
+    <tr>
+      <td><strong>Contributor</strong></td>
+      <td>Create/manage resources, can’t assign roles</td>
+    </tr>
+    <tr>
+      <td><strong>Reader</strong></td>
+      <td>View only</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p><strong>Check your role:</strong></p>
+
+<ol>
+  <li>Navigate to your subscription</li>
+  <li>Click <strong>Access control (IAM)</strong></li>
+  <li>Click <strong>View my access</strong></li>
+  <li>Note your assigned role(s)</li>
+</ol>
+
+<p>✅ <strong>Verify</strong>:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />What role do you have on this subscription?</li>
+</ul><hr />
+<h3 id="task-4-locate-azure-migrate-5-min">
+  
+  
+    <a href="#task-4-locate-azure-migrate-5-min" class="anchor-heading" aria-labelledby="task-4-locate-azure-migrate-5-min"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Task 4: Locate Azure Migrate (5 min)
+  
+  
+</h3>
+    
+
+<p>Azure Migrate is the hub for migration tools. Let’s find it.</p>
+
+<ol>
+  <li>In the portal search bar, type <strong>“Azure Migrate”</strong></li>
+  <li>Click on <strong>Azure Migrate</strong> in the results</li>
+  <li>Explore the overview page:
+    <ul>
+      <li><strong>Servers, databases and web apps</strong> — What we’ll use today</li>
+      <li><strong>Assessment tools</strong> — For evaluating readiness</li>
+      <li><strong>Migration tools</strong> — For executing migrations</li>
+    </ul>
+  </li>
+</ol>
+
+<p>✅ <strong>Verify</strong>:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Can you navigate to Azure Migrate?</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Do you see the “Discover, assess and migrate” section?</li>
+</ul><hr />
+<h2 id="expected-deliverables">
+  
+  
+    <a href="#expected-deliverables" class="anchor-heading" aria-labelledby="expected-deliverables"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Expected Deliverables
+  
+  
+</h2>
+    
+
+<p>Complete this checklist before proceeding:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Signed into Azure portal</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>Found subscription ID</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>Identified ArcBox resource group</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>Checked RBAC role assignment</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>Located Azure Migrate service</td>
+      <td>[ ]</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h2 id="success-criteria">
+  
+  
+    <a href="#success-criteria" class="anchor-heading" aria-labelledby="success-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Success Criteria
+  
+  
+</h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>Verification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Azure portal access confirmed</td>
+      <td>Can sign in and navigate subscription and resource groups</td>
+    </tr>
+    <tr>
+      <td>Azure Migrate located</td>
+      <td>Can find Azure Migrate and core migration section</td>
+    </tr>
+    <tr>
+      <td>Pre-work readiness complete</td>
+      <td>Verification checklist items are checked</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h3 id="key-terminology">
+  
+  
+    <a href="#key-terminology" class="anchor-heading" aria-labelledby="key-terminology"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Key Terminology
+  
+  
+</h3>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Azure Migrate</strong></td>
+      <td>Centralized hub for discovery, assessment, and migration</td>
+    </tr>
+    <tr>
+      <td><strong>Appliance</strong></td>
+      <td>On-premises VM that discovers your workloads</td>
+    </tr>
+    <tr>
+      <td><strong>Assessment</strong></td>
+      <td>Report evaluating migration readiness and costs</td>
+    </tr>
+    <tr>
+      <td><strong>Discovery</strong></td>
+      <td>Process of finding and cataloging your workloads</td>
+    </tr>
+    <tr>
+      <td><strong>Replication</strong></td>
+      <td>Copying data from source to target (not covered today)</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h2 id="-tip">
+  
+  
+    <a href="#-tip" class="anchor-heading" aria-labelledby="-tip"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 💡 Tip
+  
+  
+</h2>
+    
+
+<ul>
+  <li><strong>Bookmark Azure Migrate</strong> — You’ll return here frequently</li>
+  <li><strong>Use the search bar</strong> — It’s the fastest way to navigate Azure</li>
+  <li><strong>Pin to dashboard</strong> — Right-click services to pin them for quick access</li>
+</ul><hr />
+<h2 id="️-watch-out">
+  
+  
+    <a href="#️-watch-out" class="anchor-heading" aria-labelledby="️-watch-out"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ⚠️ Watch out
+  
+  
+</h2>
+    
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Issue</th>
+      <th>Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Can’t sign in</td>
+      <td>Check credentials with facilitator</td>
+    </tr>
+    <tr>
+      <td>Subscription not visible</td>
+      <td>You may not have access assigned yet</td>
+    </tr>
+    <tr>
+      <td>Portal is slow</td>
+      <td>Try a different browser or incognito mode</td>
+    </tr>
+  </tbody>
+</table></div><hr />
+<h2 id="next-step">
+  
+  
+    <a href="#next-step" class="anchor-heading" aria-labelledby="next-step"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Next Step
+  
+  
+</h2>
+    
+
+<p>Once your team has completed all verification items, proceed to the <a href="../../getting-started/workshop-prep/">Scenario Introduction</a>, then continue to <a href="../challenge-1-plan/">Challenge 1: Plan</a>.</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <p class="text-small mb-0">&copy; 2025–2026 Jonathan Vella. Distributed under the MIT License.</p>
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+    
+
+
+
+
+
+<script type="module">
+  
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.6.0/dist/mermaid.esm.min.mjs';
+  
+
+  var config = {}
+;
+  mermaid.initialize(config);
+  mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+
+
+  
+</body>
+</html>
+
