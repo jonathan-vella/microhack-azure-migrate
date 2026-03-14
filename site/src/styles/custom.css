@@ -1,0 +1,6 @@
+/* Custom styles for Azure Migration Workshop */
+
+/* Footer */
+.site-title::after {
+	content: '';
+}

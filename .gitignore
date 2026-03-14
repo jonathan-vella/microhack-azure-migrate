@@ -1,10 +1,9 @@
 # Dependencies
 node_modules/
 
-# Jekyll build output
-docs/_site/
-docs/.jekyll-cache/
-docs/.jekyll-metadata
+# Astro build output
+site/dist/
+site/.astro/
 
 # OS files
 .DS_Store

@@ -1,10 +1,7 @@
 {
   "name": "Azure Migration Workshop",
-  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
-    },
     "ghcr.io/devcontainers/features/azure-cli:1": {
       "version": "latest",
       "installBicep": true
@@ -23,9 +20,9 @@
     "GH_TOKEN": "${localEnv:GH_TOKEN}"
   },
   "forwardPorts": [
-    4000
+    4321
   ],
-  "postCreateCommand": "sh .devcontainer/post-create.sh",
+  "postCreateCommand": "npm install && cd site && npm install",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -39,7 +36,7 @@
         "redhat.vscode-yaml",
         "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
-        "sissel.shopify-liquid"
+        "astro-build.astro-vscode"
       ],
       "settings": {
         "editor.formatOnSave": true,

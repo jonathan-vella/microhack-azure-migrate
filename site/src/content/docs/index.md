@@ -16,7 +16,6 @@ appliance labs with whiteboard design sessions, aligned to the
 [Cloud Adoption Framework Migrate methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/).
 :::
 
-
 ## Schedule Overview
 
 ```mermaid
