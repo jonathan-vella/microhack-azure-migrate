@@ -62,7 +62,7 @@ within a single day.
 ## Repository Structure
 
 ```text
-docs/                   # GitHub Pages site (just-the-docs theme)
+site/                   # Astro Starlight documentation site
 facilitator/            # Facilitator guide, scoring rubric, solution reference
 scripts/                # Workshop PowerShell scripts
 ```
@@ -75,6 +75,7 @@ for Git hooks.
 - Run `npm install` once after cloning to install dependencies and register the
   `pre-commit` hook.
 - Run `npm run lint:md` to lint all Markdown files in the repository.
+- Run `cd site && npm install && npm run build` to build the documentation site.
 
 ## Sensitive-Content Review Checklist
 
@@ -92,7 +93,7 @@ real Azure actions, apply this checklist:
 - **Scoring accuracy**: Does the change keep scoring language consistent with
   the rubric?
 - **Terminology**: Does the change follow the
-  [glossary](docs/reference/glossary.md)?
+  [glossary](site/src/content/docs/reference/glossary.md)?
 
 ## Getting Started
 
@@ -118,4 +119,4 @@ real Azure actions, apply this checklist:
 This project is provided for educational and workshop use. See the repository
 for license details.
 
-**Ready to begin?** Complete the [Pre-work: Azure 101](docs/challenges/challenge-0-azure-101.md), then head to the [Agenda](docs/about/agenda.md) for the detailed schedule.
+**Ready to begin?** Complete the [Pre-work: Azure 101](site/src/content/docs/challenges/challenge-0-azure-101.md), then head to the [Agenda](site/src/content/docs/about/agenda.md) for the detailed schedule.

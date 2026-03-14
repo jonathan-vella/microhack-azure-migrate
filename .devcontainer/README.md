@@ -7,8 +7,7 @@ workshop and building the documentation site.
 
 | Tool | Source | Purpose |
 |---|---|---|
-| Ruby + Jekyll | via base image | Documentation site generation |
-| Node.js + npm | LTS | markdownlint-cli2 |
+| Node.js + npm | 22.x | Astro Starlight site + markdownlint-cli2 |
 | Azure CLI (az) | Latest | Azure resource management |
 | Bicep CLI | Latest | Infrastructure as Code |
 | GitHub CLI (gh) | Latest | Repository and PR management |
@@ -16,7 +15,7 @@ workshop and building the documentation site.
 | PowerShell (pwsh) | 7.x | Workshop automation scripts |
 
 VS Code extensions — Azure Bicep, Azure CLI Tools, PowerShell, Azure Resource
-Groups, Markdown linting, YAML support, Mermaid preview.
+Groups, Markdown linting, YAML support, Mermaid preview, Astro.
 
 ## Getting Started
 
@@ -24,24 +23,24 @@ Groups, Markdown linting, YAML support, Mermaid preview.
 
 In VS Code: `Ctrl+Shift+P` → **Dev Containers: Reopen in Container**
 
-### 2. Start the Jekyll Dev Server
+### 2. Start the Astro Dev Server
 
 ```sh
-cd docs
-bundle install
-bundle exec jekyll serve
+cd site
+npm install
+npm run dev
 ```
 
 ### 3. Preview the Site
 
-Open <http://localhost:4000/microhack-azure-migrate/> in your browser (port 4000 is
+Open <http://localhost:4321/microhack-azure-migrate/> in your browser (port 4321 is
 auto-forwarded).
 
 ## Useful Commands
 
 | Command | Purpose |
 |---|---|
-| `cd docs && bundle exec jekyll serve` | Start dev server with live reload |
-| `cd docs && bundle exec jekyll build` | Build site without serving |
-| `markdownlint-cli2 "docs/**/*.md"` | Lint all Markdown files |
-| `cd docs && bundle exec htmlproofer _site/` | Check for broken links |
+| `cd site && npm run dev` | Start dev server with live reload |
+| `cd site && npm run build` | Build site for production |
+| `cd site && npm run lint:md` | Lint all Markdown files |
+| `cd site && npm run preview` | Preview production build locally |
