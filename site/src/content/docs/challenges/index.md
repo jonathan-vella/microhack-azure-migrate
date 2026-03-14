@@ -13,7 +13,6 @@ sidebar:
 ## Challenge Timeline
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 gantt
   title Challenge Timeline
   dateFormat HH:mm

@@ -3,6 +3,9 @@ title: "Challenge 5: Curveball"
 description: "Adapt your migration plan to a surprise mid-project requirement"
 sidebar:
   order: 6
+  badge:
+    text: WDS
+    variant: caution
 ---
 
 

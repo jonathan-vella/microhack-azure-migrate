@@ -3,6 +3,9 @@ title: "Challenge 2: Deploy Appliance"
 description: "Deploy and configure the Azure Migrate appliance"
 sidebar:
   order: 3
+  badge:
+    text: Hands-on
+    variant: success
 ---
 
 

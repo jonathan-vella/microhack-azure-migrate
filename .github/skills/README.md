@@ -8,6 +8,10 @@ This repository uses a workshop-first skill set.
 - `azure-diagrams`: creates migration-focused diagrams for workshop materials
 - `challenge-guide-styler`: applies challenge template and visual style standards
 
+## Site Skills
+
+- `astro-starlight`: guides Astro Starlight site changes using current docs via the Astro MCP server
+
 ## Utility Skills
 
 - `git-commit`: conventional commit support

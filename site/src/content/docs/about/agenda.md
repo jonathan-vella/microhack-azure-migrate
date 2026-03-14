@@ -17,7 +17,6 @@ sidebar:
 ## Visual Timeline
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 gantt
   title Azure Migration MicroHack (10:00 – 17:00)
   dateFormat HH:mm

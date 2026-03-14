@@ -19,6 +19,7 @@
 - Before/after edits, run: `grep -RInE "14:45|15:00|Curveball|Points|Total" README.md AGENDA.md site/src/content/docs`.
 - Use quick inventory check: `find . -name "*.md" -o -name "*.ps1" | wc -l`.
 - For script changes (if `pwsh` exists): `pwsh -NoProfile -Command "Get-Help ./scripts/Score-Team.ps1 -Detailed"` and `pwsh -NoProfile -Command "./scripts/Cleanup-Resources.ps1 -Teams @('team1') -WhatIf"`.
+- For site changes: `cd site && npm run build` to validate Astro builds cleanly.
 
 ## Project Conventions
 
@@ -32,6 +33,7 @@
 - External dependencies are Azure workshop resources (not package managers): Azure Migrate, CAF Migrate guidance, and ArcBox ITPro (see `README.md`, `site/src/content/docs/guides/quick-reference-card.md`).
 - Facilitator setup integrates Azure portal/CLI/PowerShell workflows (`facilitator/pre-deployment-guide.md`).
 - Scripted operations integrate Azure resources and naming conventions via `scripts/Cleanup-Resources.ps1`.
+- The workshop site is built with Astro v6 + Starlight. The Astro Docs MCP server (`.vscode/mcp.json`) provides real-time access to current Astro/Starlight APIs — use it before modifying `site/` config, components, or content structure.
 
 ## Security
 

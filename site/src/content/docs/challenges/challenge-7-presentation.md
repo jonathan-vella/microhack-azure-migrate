@@ -3,6 +3,9 @@ title: "Challenge 7: Presentation"
 description: "Present your complete migration strategy in chalk-talk format"
 sidebar:
   order: 8
+  badge:
+    text: Present
+    variant: default
 ---
 
 

@@ -3,23 +3,40 @@ title: Azure Migration MicroHack
 description: "1-day hands-on MicroHack: Discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework"
 template: splash
 hero:
-  tagline: Hands-on labs and whiteboard design sessions — discover, assess, and plan Azure migrations using Azure Migrate and the Cloud Adoption Framework.
+  tagline: "A 1-day team challenge — discover, assess, and plan Azure migrations using Azure Migrate, the Cloud Adoption Framework, and Azure Arc."
   actions:
     - text: Get Started
       link: getting-started/
       icon: right-arrow
+    - text: View Challenges
+      link: challenges/
+      icon: open-book
+      variant: minimal
+banner:
+  content: "7 challenges &middot; 100 points &middot; 1 day &middot; Who will top the leaderboard?"
 ---
 
-:::tip
-**What is this MicroHack?** A 1-day team-based event combining Azure Migrate
-appliance labs with whiteboard design sessions, aligned to the
-[Cloud Adoption Framework Migrate methodology](https://learn.microsoft.com/azure/cloud-adoption-framework/migrate/).
+## What You'll Do
+
+:::tip[Discover]
+Deploy the Azure Migrate appliance and discover on-premises VMs and SQL databases running in ArcBox.
+:::
+
+:::tip[Assess]
+Evaluate migration readiness, analyse dependencies, and generate Azure suitability assessments.
+:::
+
+:::tip[Design]
+Plan migration waves, map dependencies, and align your strategy to the Cloud Adoption Framework.
+:::
+
+:::caution[Adapt]
+Respond to a mid-event curveball — new compliance requirements that change your plan.
 :::
 
 ## Schedule Overview
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 gantt
   title MicroHack Day (10:00 – 17:00)
   dateFormat HH:mm
@@ -40,8 +57,7 @@ gantt
       Wrap-up                   :16:45, 15m
 ```
 
-<details>
-<summary><strong>Text alternative: Schedule overview</strong></summary>
+:::note[Text alternative: Schedule overview]
 
 **Morning**: Welcome & Azure 101 (10:00–10:30) → C1 Plan & Design
 (10:30–11:15) → C2 Deploy Appliance (11:15–12:30) → Lunch
@@ -52,7 +68,7 @@ gantt
 
 **Presentations**: C7 Presentations (16:00–16:45) → Wrap-up (16:45–17:00)
 
-</details>
+:::
 
 ## Key Facts
 
@@ -64,17 +80,6 @@ gantt
 | **Teams** | 4 members per team (self-organising) |
 | **Format** | Hands-on labs + whiteboard design sessions |
 | **Lab Environment** | [Azure Jumpstart ArcBox for IT Pros](https://jumpstart.azure.com/azure_jumpstart_arcbox/ITPro) |
-
-## Learning Objectives
-
-By the end of this MicroHack, you will:
-
-1. **Discover** on-premises workloads using Azure Migrate appliance
-2. **Assess** migration readiness for VMs and SQL databases
-3. **Design** a migration strategy using CAF Migrate methodology
-4. **Plan** migration waves with dependency mapping
-5. **Optimise** for cost, governance, and hybrid scenarios with Azure Arc
-6. **Respond** to real-world constraints (compliance, cost, dependencies)
 
 ## The Scenario: Contoso Bakery
 
@@ -93,18 +98,16 @@ migration strategy, and present a complete plan — all within a single day.
 | Challenge 6 | — | Optimise (CAF) |
 | Challenge 7 | 5 | Present & Synthesise |
 
-## Explore the MicroHack
-
-### Quick Entry Points
+## Quick Entry Points
 
 | I need to... | Go to |
 |---|---|
 | **Check if I'm ready** | [Setup & Pre-work](getting-started/setup/) |
 | **Read the scenario** | [Workshop Prep](getting-started/workshop-prep/) |
-| **Start the challenges** | [Challenge 1](challenges/challenge-1-plan/) |
+| **Start the challenges** | [Challenge 1: Plan](challenges/challenge-1-plan/) |
 | **Fix something broken** | [Troubleshooting](reference/troubleshooting/) |
 
-### MicroHack Sections
+## MicroHack Sections
 
 - **[Getting Started](getting-started/)** — Set up your environment, check prerequisites, and learn the scenario
 - **[Challenges](challenges/)** — 7 challenges — from planning through to final presentations

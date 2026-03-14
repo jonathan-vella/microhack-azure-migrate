@@ -3,6 +3,9 @@ title: "Challenge 4: Execute"
 description: "Design migration execution strategy with tool selection and rollback"
 sidebar:
   order: 5
+  badge:
+    text: WDS
+    variant: tip
 ---
 
 

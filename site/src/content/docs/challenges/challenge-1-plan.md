@@ -3,6 +3,9 @@ title: "Challenge 1: Plan"
 description: "Design assessment strategy and migration wave plan"
 sidebar:
   order: 2
+  badge:
+    text: WDS
+    variant: tip
 ---
 
 

@@ -3,6 +3,9 @@ title: "Challenge 0: Azure 101"
 description: "Pre-work — foundational Azure skills before the workshop"
 sidebar:
   order: 1
+  badge:
+    text: Pre-work
+    variant: note
 ---
 
 

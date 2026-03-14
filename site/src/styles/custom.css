@@ -1,6 +1,154 @@
-/* Custom styles for Azure Migration MicroHack */
+/* Azure Migration MicroHack — Custom Theme */
 
-/* Footer */
+/* Azure color palette */
+:root {
+  --sl-color-accent-low: #002b4d;
+  --sl-color-accent: #0078d4;
+  --sl-color-accent-high: #6cb8f7;
+  --sl-hue-accent: 207;
+  --sl-color-white: #f0f6fc;
+  --sl-color-gray-1: #d0d7de;
+  --sl-color-gray-2: #8b949e;
+  --sl-color-gray-3: #6e7681;
+  --sl-color-gray-4: #484f58;
+  --sl-color-gray-5: #30363d;
+  --sl-color-gray-6: #21262d;
+  --sl-color-black: #0d1117;
+}
+
+:root[data-theme="light"] {
+  --sl-color-accent-low: #dbeafe;
+  --sl-color-accent: #0078d4;
+  --sl-color-accent-high: #004578;
+  --sl-color-white: #1b1b1f;
+  --sl-color-gray-1: #30363d;
+  --sl-color-gray-2: #484f58;
+  --sl-color-gray-3: #6e7681;
+  --sl-color-gray-4: #8b949e;
+  --sl-color-gray-5: #d0d7de;
+  --sl-color-gray-6: #eaeef2;
+  --sl-color-black: #ffffff;
+}
+
+/* Hero polish */
+.hero {
+  padding-block: 3rem !important;
+}
+
+.hero .tagline {
+  font-size: var(--sl-text-lg) !important;
+  max-width: 52ch;
+}
+
+.hero .actions {
+  gap: 1rem;
+}
+
+/* Card grid for feature sections on splash page */
+.sl-markdown-content .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.sl-markdown-content .card {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: var(--sl-color-gray-6);
+  transition: border-color 0.2s;
+}
+
+.sl-markdown-content .card:hover {
+  border-color: var(--sl-color-accent);
+}
+
+.sl-markdown-content .card h3 {
+  margin-top: 0;
+  font-size: var(--sl-text-base);
+}
+
+/* Better table styling */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-size: var(--sl-text-sm);
+}
+
+th {
+  background: var(--sl-color-gray-6);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--sl-text-xs);
+  letter-spacing: 0.04em;
+}
+
+td,
+th {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Sidebar badges */
+.sl-badge {
+  font-size: 0.65rem;
+  padding: 0.1em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Mermaid diagram container */
+.mermaid {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background: var(--sl-color-gray-6);
+  border: 1px solid var(--sl-color-gray-5);
+  margin-block: 1rem;
+  overflow-x: auto;
+}
+
+/* Asides — softer, more modern */
+.starlight-aside {
+  border-radius: 0.5rem;
+  border-left-width: 3px;
+}
+
+/* Feature cards layout on splash page */
+[data-has-hero] .starlight-aside + .starlight-aside {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 50rem) {
+  [data-has-hero]
+    .sl-markdown-content
+    > .starlight-aside:has(+ .starlight-aside),
+  [data-has-hero] .sl-markdown-content > .starlight-aside + .starlight-aside {
+    display: inline-block;
+    width: calc(50% - 0.5rem);
+    vertical-align: top;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Smooth link transitions */
+a {
+  transition: color 0.15s;
+}
+
+/* Footer cleanup */
 .site-title::after {
   content: "";
+}
+
+/* Print improvements */
+@media print {
+  .mermaid {
+    break-inside: avoid;
+  }
 }

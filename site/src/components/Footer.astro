@@ -7,25 +7,30 @@ import StarlightFooter from '@astrojs/starlight/components/Footer.astro';
 <script>
   import mermaid from 'mermaid';
 
-  const theme = document.documentElement.dataset.theme === 'light' ? 'default' : 'dark';
-  mermaid.initialize({ startOnLoad: true, theme });
+  function getTheme() {
+    const st = document.documentElement.dataset.theme;
+    return st === 'light' ? 'default' : 'dark';
+  }
 
-  const observer = new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      if (m.attributeName === 'data-theme') {
-        const next = document.documentElement.dataset.theme === 'light' ? 'default' : 'dark';
-        mermaid.initialize({ startOnLoad: false, theme: next });
-        document.querySelectorAll('.mermaid[data-processed]').forEach((el) => {
-          el.removeAttribute('data-processed');
-          el.innerHTML = el.getAttribute('data-original') || el.textContent || '';
-        });
-        mermaid.run();
-      }
-    }
-  });
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  mermaid.initialize({ startOnLoad: false, theme: getTheme() });
 
   document.querySelectorAll('.mermaid').forEach((el) => {
     el.setAttribute('data-original', el.textContent || '');
   });
+
+  await mermaid.run();
+
+  const observer = new MutationObserver(async (mutations) => {
+    for (const m of mutations) {
+      if (m.attributeName === 'data-theme') {
+        mermaid.initialize({ startOnLoad: false, theme: getTheme() });
+        document.querySelectorAll('.mermaid').forEach((el) => {
+          el.removeAttribute('data-processed');
+          el.innerHTML = el.getAttribute('data-original') || el.textContent || '';
+        });
+        await mermaid.run();
+      }
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 </script>

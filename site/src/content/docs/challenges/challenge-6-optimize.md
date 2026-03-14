@@ -3,6 +3,9 @@ title: "Challenge 6: Optimise"
 description: "Design cost optimisation, governance, and hybrid management strategy"
 sidebar:
   order: 7
+  badge:
+    text: WDS
+    variant: tip
 ---
 
 

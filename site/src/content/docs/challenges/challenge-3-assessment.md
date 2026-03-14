@@ -3,6 +3,9 @@ title: "Challenge 3: Assessment"
 description: "Create and analyse Azure VM and SQL assessments"
 sidebar:
   order: 4
+  badge:
+    text: Hands-on
+    variant: success
 ---
 
 
